@@ -87,15 +87,19 @@ export function Footer() {
           </Flex>
         </GridItem>
       </Grid>
+        
       <Flex
         marginLeft={["10%", "10%", "20%"]}
+        marginRight={["10%", "10%", "15%"]}
         paddingBottom="1rem"
-        justifyContent={["end", "center", "space-between"]}
+        justifyContent={["start", "start", "space-between"]}
         alignItems={["center", "center", "flex-end"]}
         flexWrap="wrap"
         gap="1rem"
       >
-        <Flex gap="1rem" direction={["column", "row", "row"]}>
+        <Flex gap="1rem"
+         direction={["column", "row", "row"]}
+         align="start">
           <NavigationOption link="">
             <Text text="Legal" color="#919496"></Text>
           </NavigationOption>
@@ -114,9 +118,12 @@ export function Footer() {
         </Flex>
 
         <Flex
-          direction={["column", "row", "column"]}
+          direction={["column", "row", "row", "row", "column"]}
+          align={["start","flex-end"]}
+          justify={["start", "center", "center","center", "flex-end"]}
           marginRight="2rem"
           gap="1rem"
+          w={["full", "full", "full", "full", "fit-content"]}
         >
           <Flex gap="0.2rem" align="center">
             <Globe size="15" color="#919496" />

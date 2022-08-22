@@ -12,7 +12,7 @@ import { Button } from "../Common/DefaultButton";
 export function SupportComponent(){
     return (
         <Box
-            h="100vh"
+            h="100%"
             bgGradient="linear(176deg, darkGreen 0%, black 25%)"
             alignContent="center"
             >
@@ -23,44 +23,52 @@ export function SupportComponent(){
                 <Flex 
                     direction="column"
                     gap="2rem"
-                    width="35%">
+                    width={["full", "80%", "full", "50%", "50%","35%"]}
+                    align={["center", "center", "center", "center", "start"]}>
                     <ChakraText 
                     textTransform="uppercase"
-                    fontSize="1.2rem;"
+                    fontSize={["0.8rem", "0.9rem"]}
+                    textAlign={["center", "center", "center", "left"]}
                     fontWeight="bold"
                     color="#a7a7a7">
                         Atendimento do Spotify
                     </ChakraText>
                     <ChakraText
-                     fontSize="4rem;"
+                     fontSize={["2rem", "3.2rem", "4rem", "3rem", "4rem"]}
                      fontWeight="900"
                      color="#fff"
                     >
                     Como podemos ajudar?
                     </ChakraText>
                     <ChakraText 
-                        fontSize="1.5rem"
+                        fontSize={["1rem", "1rem", "1rem", "1.5rem"]}
+                        textAlign={["center", "center", "center", "left"]}
                         fontWeight="bold"
                         color="#a7a7a7"
                     >
                         <NavigationOption link="" style={{textDecoration: "underline"}} color="#fff">Faça log in</NavigationOption> para ter ajuda mais rápido    
                     </ChakraText>
 
-                    <InputGroup>
-                        <InputLeftElement
-                        pointerEvents='none'
-                        children={<SearchIcon color='gray.300'
-                        marginTop="0.6rem"/>}
-                        />
-                        <Input type='text' placeholder='Buscar'
-                        bg="white"
-                        size="lg"/>
-                    </InputGroup>
+                    <Box
+                        padding={["0.5rem", "0"]} w={["80%", "80%", "80%","full"]}>
+                        <InputGroup>
+                            <InputLeftElement
+                            pointerEvents='none'
+                            children={<SearchIcon color='gray.300'
+                            marginTop="0.6rem"/>}
+                            />
+                            <Input type='text' placeholder='Buscar'
+                            bg="white"
+                            size="lg"/>
+                        </InputGroup>
+                    </Box>
 
                     <Grid
                     templateColumns={{
-                        md: "repeat(1, 1fr)",
-                        lg: "repeat(3, 1fr)",
+                        sm: "repeat(1, 1fr)",
+                        md: "repeat(2, 1fr)",
+                        lg: "repeat(2, 1fr)",
+                        xl: "repeat(3, 1fr)"
                       }}
                       gap="2rem"
                     >
@@ -77,9 +85,10 @@ export function SupportComponent(){
 
             <Box 
                 width="100%"
-                h="50vh"
+                h="50%"
                 bg="#232323"
-                marginTop="5rem">
+                padding="4rem"
+                marginTop="4rem">
                 <Center>
                     <Flex width="35%" align="flex-start" marginTop="2rem" gap="2rem" direction="column">
                         <ChakraText fontSize="1.5rem" fontWeight="700" color="#fff">Ajuda rápida</ChakraText>
@@ -95,16 +104,16 @@ export function SupportComponent(){
 
             <Box
                 width="100%"
-                h="30vh"
+                h="35%"
                 bg="#121212">
                 <Center>
                     <Flex
-                    marginTop="4rem"
+                    margin="4rem"
                     gap="0.5rem"
                     direction="column"
                     align="center">
-                        <ChakraText color="#fff" fontSize="3rem" fontWeight="900">Visite nossa Comunidade</ChakraText>
-                        <ChakraText color="#fff" fontSize="1rem" maxWidth="85%" textAlign="center">Tem uma pergunta? Encontre respostas na nossa Comunidade de fãs especialistas do mundo todo!</ChakraText>
+                        <ChakraText color="#fff" fontSize={["1rem", "2rem", "2rem", "3rem"]} fontWeight="900">Visite nossa Comunidade</ChakraText>
+                        <ChakraText color="#fff" fontSize={["0.6rem", "0.6rem", "1rem"]} maxWidth="85%" textAlign="center">Tem uma pergunta? Encontre respostas na nossa Comunidade de fãs especialistas do mundo todo!</ChakraText>
                         <Button color="greenX.100" text="Acesse a Comunidade do Spotify" fontColor="black"></Button>
                     </Flex>
                 </Center>
