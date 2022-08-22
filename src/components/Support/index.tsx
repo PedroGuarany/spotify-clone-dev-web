@@ -90,7 +90,7 @@ export function SupportComponent(){
                 padding="4rem"
                 marginTop="4rem">
                 <Center>
-                    <Flex width="35%" align="flex-start" marginTop="2rem" gap="2rem" direction="column">
+                    <Flex w={["full", "80%", "50%", "50%", "50%","35%"]} align="flex-start" marginTop="2rem" gap="2rem" direction="column">
                         <ChakraText fontSize="1.5rem" fontWeight="700" color="#fff">Ajuda rápida</ChakraText>
                         <FaqOption link="" text="Não consigo redefinir a senha"></FaqOption>
                         <FaqOption link="" text="Tem algo errado com a minha conta"></FaqOption>
