@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Header />
       <Main />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

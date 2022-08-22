@@ -1,4 +1,5 @@
-import { Button, Flex, Text, Box } from "@chakra-ui/react";
+import { Flex, Text, Box } from "@chakra-ui/react";
+import { Button } from "../Common/DefaultButton";
 
 export function ContentMain() {
   return (
@@ -30,18 +31,7 @@ export function ContentMain() {
           Milhões de músicas e podcasts para explorar. E nem precisa de cartão
           de crédito.
         </Text>
-        <Button
-          bgColor="greenX.100"
-          color="#2941ab"
-          variant="solid"
-          fontSize="0.875rem"
-          fontWeight="bold"
-          padding="0.875rem 2rem"
-          marginTop="2rem"
-          borderRadius="2rem"
-        >
-          BAIXE O SPOTIFY FREE
-        </Button>
+        <Button color="greenX.100" fontColor="#2941ab" text="BAIXE O SPOTIFY FREE"></Button>
       </Flex>
     </Box>
   );

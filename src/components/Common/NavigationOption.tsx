@@ -1,16 +1,16 @@
 import NextLink from "next/link";
-import { Link } from "@chakra-ui/react";
+import { Link, LinkProps } from "@chakra-ui/react";
 import { ReactNode } from "react";
 
-interface NavigationOptionProps {
+interface NavigationOptionProps extends LinkProps{
   link: string;
   children?: ReactNode;
 }
 
-export function NavigationOption({ link, children}: NavigationOptionProps) {
+export function NavigationOption({ link, children, ...rest}: NavigationOptionProps) {
   return (
     <NextLink href={link} passHref>
-      <Link style={{ textDecoration: "none" }}>
+      <Link style={{ textDecoration: "none" }} {...rest}>
         {children}
       </Link>
     </NextLink>

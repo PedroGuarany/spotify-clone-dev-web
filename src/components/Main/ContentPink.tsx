@@ -1,6 +1,5 @@
 import {
   Flex,
-  Button,
   Text,
   Box,
   Image,
@@ -8,6 +7,8 @@ import {
   GridItem,
   Link,
 } from "@chakra-ui/react";
+
+import { Button } from "../Common/DefaultButton"
 
 export function ContentPink() {
   return (
@@ -24,8 +25,6 @@ export function ContentPink() {
           direction="column"
           padding={["2rem", "4rem", "7rem"]}
           align={["center", "center", "center", "flex-start"]}
-          // width="35rem"
-          // justify="center"
           gap="1rem"
           maxWidth={["35rem", "50rem", "80rem", "50rem", "50rem"]}
         >
@@ -58,26 +57,10 @@ export function ContentPink() {
               direction="column"
               alignItems={["center", "center", "center", "start", "start"]}
             >
-              <Button
-                bgColor="#000"
-                variant="solid"
-                fontSize="0.875rem"
-                fontWeight="bold"
-                padding="0.875rem 2rem"
-                marginTop="1rem"
-                borderRadius="2rem"
-                textStyle="defaultText"
-                textTransform="uppercase"
-                _hover={{ transform: "scale(1.04)" }}
-                width={["15rem", "20rem", "20rem", "20rem", "20rem"]}
-                textAlign={["center", "center", "center", "start"]}
-              >
-                Aproveite 3 meses grátis
-              </Button>
-
+              <Button color="#000" text="APROVEITE 3 MESES GRÁTIS" fontColor="#fff"></Button>
               <Text
                 textStyle="defaultText"
-                fontSize={["10px", "12px"]}
+                fontSize={["0.625rem", "0.75rem"]}
                 fontWeight="bold"
               >
                 Somente no plano Individual. Depois, é só R$ 19,90/mês.{" "}

@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
             crossOrigin="true"
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
             rel="stylesheet"
           ></link>
           <link rel="icon" href="https://www.scdn.co/i/_global/favicon.png" />
