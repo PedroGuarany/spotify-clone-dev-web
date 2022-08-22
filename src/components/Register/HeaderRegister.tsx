@@ -10,10 +10,10 @@ export function HeaderRegister() {
         padding="40px 0 32px">
 
             <LogoBlack/>
-            <Flex 
-            marginTop="40px"
-            width="450px">
-                <Heading textAlign="center" as='h1' size='lg' fontSize="30px" fontWeight="800">
+            <Flex
+            justifyContent="center" 
+            marginTop="2.5rem">
+                <Heading textAlign="center" as='h1' size='lg' fontSize="2rem" fontWeight="800">
                     Inscreva-se grátis e comece a curtir.
                 </Heading>
             </Flex>
