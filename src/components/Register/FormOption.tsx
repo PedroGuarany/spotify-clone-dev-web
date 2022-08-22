@@ -1,34 +1,42 @@
-import { Box, Link } from "@chakra-ui/react"
 import {
-    FormControl,
-    FormLabel,
-    FormErrorMessage,
-    FormHelperText,
-    Input,
-  } from '@chakra-ui/react'
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+  Input,
+  Box,
+} from "@chakra-ui/react";
+import { ReactNode } from "react";
 
-  interface FormOptionProps{
-    label: string,
-    placeholder: string
-  }
+interface FormOptionProps {
+  label: string;
+  placeholder: string;
+  type: string;
+  children?: ReactNode;
+}
 
-export function FormOption({label, placeholder}: FormOptionProps) {
-    return (
-        <>
-        <Box paddingBottom="1.5rem">
-            <FormControl>   
-              <FormLabel fontWeight="bold">
-                  Qual é o seu e-mail?
-              </FormLabel>
-              <Input placeholder="Insira seu e-mail." borderColor="lightGray" borderRadius="4px" height="52px"  type='email'
-                _hover={{
-                borderColor: "#000",
-                }} />
-              <FormHelperText>
-                <Link color="#117a37" href="#" textDecoration="underline">Usar número de telefone.</Link>
-              </FormHelperText>
-            </FormControl>
-          </Box>
-        </>
-    );
+export function FormOption({
+  label,
+  placeholder,
+  type,
+  children,
+}: FormOptionProps) {
+  return (
+    <Box>
+      <FormControl>
+        <FormLabel fontWeight="bold">{label}</FormLabel>
+        <Input
+          placeholder={placeholder}
+          borderColor="lightGray"
+          borderRadius="0.25rem"
+          height="3.25rem"
+          type={type}
+          _hover={{
+            borderColor: "#000",
+          }}
+        />
+        {children}
+      </FormControl>
+    </Box>
+  );
 }

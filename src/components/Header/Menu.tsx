@@ -84,7 +84,7 @@ const NavbarItems = () => {
         <Text text="Baixar"></Text>
       </NavigationOption>
       <Divider orientation="vertical" height="1rem"></Divider>
-      <NavigationOption link={"/login"}>
+      <NavigationOption link={"/register"}>
         <Text text="Inscrever-se"></Text>
       </NavigationOption>
       <NavigationOption link={"/login"}>

@@ -1,11 +1,11 @@
-import { Button as ChakraButton } from "@chakra-ui/react";
+import { Button as ChakraButton, ButtonProps } from "@chakra-ui/react";
 
-interface DefaultButtonProps{
+interface DefaultButtonProps extends ButtonProps {
     text: string,
     color: string,
     fontColor: string
 }
-export function Button({text, color, fontColor}: DefaultButtonProps){
+export function Button({text, color, fontColor, ...rest}: DefaultButtonProps){
     return(
         <ChakraButton
                 bgColor={color}
@@ -20,6 +20,7 @@ export function Button({text, color, fontColor}: DefaultButtonProps){
                 _hover={{ transform: "scale(1.04)" }}
                 width={["15rem", "20rem", "20rem", "20rem", "20rem"]}
                 textAlign={["center", "center", "center", "start"]}
+                {...rest}
               >
                 {text}
               </ChakraButton>
