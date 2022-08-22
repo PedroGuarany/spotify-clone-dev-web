@@ -1,5 +1,5 @@
 import { Flex, Heading } from '@chakra-ui/react'
-import { LogoBlack } from './LogoBlack';
+import { LogoBlack } from '../Common/Logo';
 
 export function HeaderRegister() {
     return (
