@@ -4,8 +4,8 @@ import { ContentPink } from "./ContentPink";
 export function Main() {
   return (
     <>
-      <ContentPink /> 
-      <ContentMain />
+      <ContentPink />
+      {/* <ContentMain /> */}
     </>
   );
 }
