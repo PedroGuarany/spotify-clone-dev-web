@@ -1,10 +1,10 @@
 import { Text as ChakraText, TextProps } from "@chakra-ui/react";
 
-interface MenuTextProps extends TextProps {
+interface DefaultTextProps extends TextProps {
   text: string;
 }
 
-export function Text({ text, ...rest }: MenuTextProps) {
+export function Text({ text, ...rest }: DefaultTextProps) {
   return (
       <ChakraText
         fontSize="0.9375rem;"

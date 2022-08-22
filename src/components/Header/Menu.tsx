@@ -7,24 +7,28 @@ import {
   IconButton,
   Stack,
   useDisclosure,
+  FlexProps
 } from "@chakra-ui/react";
 import { Logo } from "../Common/Logo";
 import { NavigationOption } from "../Common/NavigationOption";
 import { Text } from "../Common/DefaultText";
 
-export function Menu() {
+interface MenuProps extends FlexProps{
+}
+
+export function Menu({...rest}: MenuProps) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (
     <Box>
       <Flex
         bg="#000"
-        minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         align={"center"}
+        {...rest}
       >
-        <Flex flex={{ base: 1 }} justify={"space-between"} align="center">
+        <Flex flex={{ base: 1 }} justify={"space-around"} align="center">
           <Logo />
 
           <Flex
@@ -32,7 +36,7 @@ export function Menu() {
             justify="center"
             align="center"
             direction={"row"}
-            gap="1rem"
+            gap="2.5rem"
           >
             <NavbarItems />
           </Flex>

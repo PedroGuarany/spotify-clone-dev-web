@@ -5,6 +5,7 @@ export const theme = extendTheme({
     greenX: {
       100: "#1ED760",
     },
+    darkGreen: "#157a39",
     darkGray: "#919496"
   },
   fonts: {
