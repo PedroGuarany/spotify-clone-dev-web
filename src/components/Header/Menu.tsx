@@ -77,7 +77,7 @@ const NavbarItems = () => {
       <NavigationOption link={"/login"}>
         <Text text="Premium"></Text>
       </NavigationOption>
-      <NavigationOption link={"/login"}>
+      <NavigationOption link={"/support"}>
         <Text text="Suporte"></Text>
       </NavigationOption>
       <NavigationOption link={"/login"}>
