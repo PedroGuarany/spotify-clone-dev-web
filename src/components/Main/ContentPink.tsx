@@ -1,14 +1,6 @@
-import {
-  Flex,
-  Text,
-  Box,
-  Image,
-  Grid,
-  GridItem,
-  Link,
-} from "@chakra-ui/react";
+import { Flex, Text, Box, Image, Grid, GridItem, Link } from "@chakra-ui/react";
 
-import { Button } from "../Common/DefaultButton"
+import { Button } from "../Common/DefaultButton";
 
 export function ContentPink() {
   return (
@@ -37,8 +29,8 @@ export function ContentPink() {
           </Text>
           <Text
             textStyle="defaultText"
-            fontSize={["1.5rem", "2.3rem", "3rem", "2rem", "3rem"]}
             fontWeight="bold"
+            fontSize={["1.5rem", "2.3rem", "3rem", "2rem", "3rem"]}
             textAlign={["center", "center", "center", "left"]}
           >
             Aproveite 3 meses de Premium por R$ 0,00
@@ -57,7 +49,11 @@ export function ContentPink() {
               direction="column"
               alignItems={["center", "center", "center", "start", "start"]}
             >
-              <Button color="#000" text="APROVEITE 3 MESES GRÁTIS" fontColor="#fff"></Button>
+              <Button
+                color="#000"
+                text="APROVEITE 3 MESES GRÁTIS"
+                fontColor="#fff"
+              ></Button>
               <Text
                 textStyle="defaultText"
                 fontSize={["0.625rem", "0.75rem"]}

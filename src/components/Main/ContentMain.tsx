@@ -5,33 +5,57 @@ export function ContentMain() {
   return (
     <Box
       backgroundColor="#2D46B9"
-      backgroundImage="/assets/main/circles.svg"
+      backgroundImage={[
+        "none",
+        "none",
+        "none",
+        "none",
+        "/assets/main/circles.svg",
+      ]}
       backgroundRepeat="no-repeat"
-      backgroundPosition="right center"
-      backgroundSize="auto 10 0%"
+      backgroundPosition={["center center", "right center"]}
+      backgroundSize={["auto 10 0%"]}
       textAlign="center"
-      height="50vh"
     >
       <Flex
         direction="column"
-        marginLeft="7rem"
+        padding={["2rem", "4rem", "4rem", "7rem", "7rem"]}
+        alignItems={["center", "center", "center", "start", "start"]}
         align="flex-start"
-        width="35rem"
+        maxWidth={["50rem", "50rem", "80rem", "50rem", "50rem"]}
         justify="center"
-        height="50vh"
+        // height={["50rem"]}
         gap="2rem"
       >
-        <Text color="greenX.100" fontWeight="600" fontSize="0.9rem">
+        <Text
+          textStyle="defaultText"
+          color="greenX.100"
+          fontWeight="600"
+          fontSize={["0.8rem", "0.9rem"]}
+        >
           SPOTIFY FREE
         </Text>
-        <Text color="greenX.100" fontSize="3rem" fontWeight="bold">
+        <Text
+          textStyle="defaultText"
+          textAlign={["center", "center", "center", "left"]}
+          fontWeight="bold"
+          fontSize={["2rem", "2.3rem", "3rem", "2rem", "3rem"]}
+        >
           Escutar muda tudo
         </Text>
-        <Text color="greenX.100" fontSize="1.5rem" textAlign="start">
+        <Text
+          color="greenX.100"
+          fontSize={["1rem", "1rem", "1rem", "1.5rem"]}
+          textAlign={["center", "center", "center", "left"]}
+        >
           Milhões de músicas e podcasts para explorar. E nem precisa de cartão
           de crédito.
         </Text>
-        <Button color="greenX.100" fontColor="#2941ab" text="BAIXE O SPOTIFY FREE"></Button>
+        <Button
+          color="greenX.100"
+          fontColor="#2941ab"
+          text="BAIXE O SPOTIFY FREE"
+        ></Button>
       </Flex>
     </Box>
   );

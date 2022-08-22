@@ -1,29 +1,39 @@
 import { EmailIcon } from "@chakra-ui/icons";
-import { Box, Grid, GridItem, UnorderedList, ListItem, Link, Button, IconButton, Flex } from "@chakra-ui/react";
-import { Logo } from "../Common/Logo"
+import {
+  Box,
+  Grid,
+  GridItem,
+  UnorderedList,
+  ListItem,
+  Link,
+  Button,
+  IconButton,
+  Flex,
+} from "@chakra-ui/react";
+import { Logo } from "../Common/Logo";
 import { FooterList } from "./FooterList";
 import { FooterListOption } from "./FooterListOption";
-import { Facebook, Twitter, Instagram } from "react-feather"
+import { Facebook, Twitter, Instagram } from "react-feather";
 import { Text } from "../Common/DefaultText";
 import { NavigationOption } from "../Common/NavigationOption";
-import {Globe} from "react-feather"
+import { Globe } from "react-feather";
 
 export function Footer() {
   return (
-    <Box
-      bgColor="black">
+    <Box bgColor="black">
       <Grid
         templateColumns={{
+          sm: "repeat(1, 1fr)",
           md: "repeat(1, 1fr)",
           lg: "repeat(7, 1fr)",
         }}
         width="100vw"
-        height="40vh"
-        padding="5rem 2rem"
+        padding={["2rem", "3rem 2rem"]}
+        gap="2rem"
       >
         <GridItem></GridItem>
         <GridItem>
-          <Logo width={["100%", "100%"]} />
+          <Logo width={["80%", "60%", "50%", "100%"]} />
         </GridItem>
         <GridItem>
           <FooterList topic="Empresa">
@@ -49,17 +59,43 @@ export function Footer() {
           </FooterList>
         </GridItem>
         <GridItem>
-          <Flex gap="1rem">
-            <IconButton aria-label="InstagramIcon" icon={<Instagram size="18"/>} colorScheme="white" bgColor="#222326" borderRadius="50%" _hover={{color: "#1ED760"}}></IconButton>
-            <IconButton aria-label="TwitterIcon" icon={<Twitter size="18" fill="white"/>} colorScheme="white" bgColor="#222326" borderRadius="50%" _hover={{color: "#1ED760"}}></IconButton>
-            <IconButton aria-label="FacebookIcon" icon={<Facebook size="18" fill="white"/>} colorScheme="white" bgColor="#222326" borderRadius="50%" _hover={{color: "#1ED760"}}></IconButton>
+          <Flex gap="1rem" align="center" justify="center">
+            <IconButton
+              aria-label="InstagramIcon"
+              icon={<Instagram size="18" />}
+              colorScheme="white"
+              bgColor="#222326"
+              borderRadius="50%"
+              _hover={{ color: "#1ED760" }}
+            ></IconButton>
+            <IconButton
+              aria-label="TwitterIcon"
+              icon={<Twitter size="18" fill="white" />}
+              colorScheme="white"
+              bgColor="#222326"
+              borderRadius="50%"
+              _hover={{ color: "#1ED760" }}
+            ></IconButton>
+            <IconButton
+              aria-label="FacebookIcon"
+              icon={<Facebook size="18" fill="white" />}
+              colorScheme="white"
+              bgColor="#222326"
+              borderRadius="50%"
+              _hover={{ color: "#1ED760" }}
+            ></IconButton>
           </Flex>
         </GridItem>
-        <GridItem></GridItem>
       </Grid>
-
-      <Flex marginLeft="20%" width="60%" paddingBottom="1rem" justifyContent="space-between" alignItems="flex-end" flexWrap="wrap">
-        <Flex gap="1rem" >
+      <Flex
+        marginLeft={["10%", "10%", "20%"]}
+        paddingBottom="1rem"
+        justifyContent={["end", "center", "space-between"]}
+        alignItems={["center", "center", "flex-end"]}
+        flexWrap="wrap"
+        gap="1rem"
+      >
+        <Flex gap="1rem" direction={["column", "row", "row"]}>
           <NavigationOption link="">
             <Text text="Legal" color="#919496"></Text>
           </NavigationOption>
@@ -77,9 +113,13 @@ export function Footer() {
           </NavigationOption>
         </Flex>
 
-        <Flex alignItems="flex-end" direction="column">
+        <Flex
+          direction={["column", "row", "column"]}
+          marginRight="2rem"
+          gap="1rem"
+        >
           <Flex gap="0.2rem" align="center">
-            <Globe size="15" color="#919496"/>
+            <Globe size="15" color="#919496" />
             <NavigationOption link="">
               <Text text="Brazil" color="#919496"></Text>
             </NavigationOption>
