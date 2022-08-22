@@ -18,69 +18,86 @@ export function ContentPink() {
           lg: "repeat(2, 1fr)",
         }}
         width="100vw"
-        height="50vh"
+        maxHeight={["70rem", "70rem", "80rem", "50rem", "45rem"]}
       >
         <Flex
           direction="column"
-          marginLeft="7rem"
-          align="flex-start"
-          width="35rem"
-          justify="center"
+          padding={["2rem", "4rem", "7rem"]}
+          align={["center", "center", "center", "flex-start"]}
+          // width="35rem"
+          // justify="center"
           gap="1rem"
+          maxWidth={["35rem", "50rem", "80rem", "50rem", "50rem"]}
         >
-          <Text textStyle="defaultText" fontWeight="600" fontSize="0.9rem">
+          <Text
+            textStyle="defaultText"
+            fontWeight="600"
+            fontSize={["0.8rem", "0.9rem"]}
+          >
             SPOTIFY PREMIUM
           </Text>
-          <Text textStyle="defaultText" fontSize="3rem" fontWeight="bold">
+          <Text
+            textStyle="defaultText"
+            fontSize={["1.5rem", "2.3rem", "3rem", "2rem", "3rem"]}
+            fontWeight="bold"
+            textAlign={["center", "center", "center", "left"]}
+          >
             Aproveite 3 meses de Premium por R$ 0,00
           </Text>
-          <Text textStyle="defaultText" fontSize="1.5rem" textAlign="start">
+          <Text
+            textStyle="defaultText"
+            fontSize={["1rem", "1rem", "1rem", "1.5rem"]}
+            textAlign={["center", "center", "center", "left"]}
+          >
             Curta músicas sem anúncios, ouça no modo offline e muito mais.
             Cancele quando quiser.
           </Text>
           <GridItem>
-          <Button
-            bgColor="#000"
-            variant="solid"
-            fontSize="0.875rem"
-            fontWeight="bold"
-            padding="0.875rem 2rem"
-            marginTop="2rem"
-            borderRadius="2rem"
-            textStyle="defaultText"
-            textTransform="uppercase"
-            _hover={{ transform: "scale(1.04)" }}
-          >
-            Aproveite 3 meses grátis
-          </Button>
-          <Button
-            variant="outline"
-            fontSize="0.875rem"
-            fontWeight="bold"
-            padding="0.875rem 2rem"
-            marginTop="2rem"
-            marginLeft="1rem"
-            borderRadius="2rem"
-            color="white"
-            textTransform="uppercase"
-            _hover={{ transform: "scale(1.04)" }}
-          >
-            Ver Plano
-          </Button>
+            <Flex
+              gap="3rem"
+              direction="column"
+              alignItems={["center", "center", "center", "start", "start"]}
+            >
+              <Button
+                bgColor="#000"
+                variant="solid"
+                fontSize="0.875rem"
+                fontWeight="bold"
+                padding="0.875rem 2rem"
+                marginTop="1rem"
+                borderRadius="2rem"
+                textStyle="defaultText"
+                textTransform="uppercase"
+                _hover={{ transform: "scale(1.04)" }}
+                width={["15rem", "20rem", "20rem", "20rem", "20rem"]}
+                textAlign={["center", "center", "center", "start"]}
+              >
+                Aproveite 3 meses grátis
+              </Button>
+
+              <Text
+                textStyle="defaultText"
+                fontSize={["10px", "12px"]}
+                fontWeight="bold"
+              >
+                Somente no plano Individual. Depois, é só R$ 19,90/mês.{" "}
+                <Link textDecoration="underline">
+                  Sujeito a Termos e Condições.
+                </Link>{" "}
+                Disponível apenas para quem nunca usou o Premium. Oferta válida
+                até 11 de setembro de 2022.
+              </Text>
+            </Flex>
           </GridItem>
-          <Text textStyle="defaultText" fontSize="10px" fontWeight="bold">
-            Somente no plano Individual. Depois, é só R$ 19,90/mês.{" "}
-            <Link textDecoration="underline">
-              Sujeito a Termos e Condições.
-            </Link>{" "}
-            Disponível apenas para quem nunca usou o Premium. Oferta válida até
-            11 de setembro de 2022.
-          </Text>
         </Flex>
 
         <GridItem>
-          <Flex align="center" justify="center" height="50vh">
-            <Image src="/assets/main/teste.jpeg" width="25rem" />
+          <Flex align="center" justify="center" height="full">
+            <Image
+              src="/assets/main/teste.jpeg"
+              width={["15rem", "25rem", "25rem", "25rem", "25rem"]}
+              marginBottom={["2rem"]}
+            />
           </Flex>
         </GridItem>
       </Grid>
