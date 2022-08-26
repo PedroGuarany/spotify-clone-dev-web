@@ -10,7 +10,9 @@ export function Register() {
         justify="center"
         flexDirection="column"
         margin="0 auto"
-        width="28rem">
+        width="28rem"
+        paddingRight={[23, 23, 23, 0]}
+        paddingLeft={[23, 23, 23, 0]}>
         <HeaderRegister />
         <FormRegister />
         </Flex>

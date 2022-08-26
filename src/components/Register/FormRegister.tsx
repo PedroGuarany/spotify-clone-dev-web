@@ -14,7 +14,7 @@ import { Button } from "../Common/DefaultButton";
 
 export function FormRegister() {
   return (
-    <Box width="28rem" paddingBottom="8.125rem">
+    <Box width="100%" paddingBottom="8.125rem">
       <Flex direction="column" gap="1.5rem">
         <FormOption
           label="Qual é o seu e-mail?"

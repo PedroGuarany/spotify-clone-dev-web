@@ -7,7 +7,7 @@ export function HeaderRegister() {
         <Flex
         align="center"
         flexDirection="column"
-        padding="40px 0 32px">
+        padding="2.5rem 0 2rem">
 
             <LogoBlack/>
             <Flex
