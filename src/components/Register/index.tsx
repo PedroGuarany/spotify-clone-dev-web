@@ -8,7 +8,9 @@ export function Register() {
         <>
         <Flex align="center"
         justify="center"
-        flexDirection="column">
+        flexDirection="column"
+        margin="0 auto"
+        width="28rem">
         <HeaderRegister />
         <FormRegister />
         </Flex>
