@@ -73,7 +73,8 @@ export function ContentPink() {
         <GridItem>
           <Flex align="center" justify="center" height="full">
             <Image
-              src="/assets/main/teste.jpeg"
+              src="/assets/main/pinkDressedWoman.jpeg"
+              alt=""
               width={["15rem", "25rem", "25rem", "25rem", "25rem"]}
               marginBottom={["2rem"]}
             />
