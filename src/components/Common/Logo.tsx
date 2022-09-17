@@ -15,7 +15,12 @@ export function Logo({ width, height }: LogoProps) {
   );
 }
 
-export function LogoBlack({width, height} : LogoProps) {
-    return <Image src={"/assets/logo/logoSpotifyBlack.svg"} alt="Logo do Spotify" width={width ?? ["5rem", "8rem"]} />;
-  }
-  
+export function LogoBlack({ width, height }: LogoProps) {
+  return (
+    <Image
+      src={"/assets/logo/logoSpotifyBlack.svg"}
+      alt="Logo do Spotify"
+      width={width ?? ["5rem", "8rem"]}
+    />
+  );
+}
