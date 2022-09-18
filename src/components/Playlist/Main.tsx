@@ -1,5 +1,6 @@
-import { Box, Flex, Heading, Text, Image, Grid } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, Image, Grid, Link } from "@chakra-ui/react";
 import { NavBarLeft } from "../Common/NavBarLeft";
+import { PointIcon } from "../Common/PointIcon";
 import { ContentMusic } from "./ContentMusic";
 import { DefaultImage } from "./DefaultImage";
 
@@ -20,15 +21,19 @@ export function Main() {
                   src={"/assets/playlist/playlistImage.svg"}
                   alt={"Imagem da playlist: o drip"}
                 />
-                <Box color="white" width="auto" margin="24px 0 0 24px">
+                <Box color="white" width="auto" margin="18px 0 0 24px">
                   <Text textTransform="uppercase" paddingTop="10px">
                     playlist
                   </Text>
                   <Heading margin="8px 0 12px" fontSize="98px" fontWeight="900">
                     O Drip
                   </Heading>
-                  <Text>
+                  <Text color="#b3b3b3">
                     Chique e confortável como a realeza do Trap. Foto: Brandão85
+                  </Text>
+
+                  <Text paddingTop="8px" fontSize="14px" display="flex" gap="4px" alignItems="center">
+                    <Link fontWeight="bold" href="/user/spotify">Spotify</Link> <PointIcon /> {"57.658"} curtidas <PointIcon /> {"50"} músicas, {"2h 33min"}
                   </Text>
                 </Box>
               </Flex>
@@ -42,11 +47,15 @@ export function Main() {
                 marginRight="24px"
                 _hover={{ transform: "scale(1.04)" }}
               />
-              <Image src="/assets/icons/optionsICon.svg" alt="Ícone de opções" />
+              <Image
+                src="/assets/icons/optionsICon.svg"
+                alt="Ícone de opções"
+              />
             </Flex>
           </Box>
           <Box background="#121212" padding="32px 32px">
-            <Grid gridTemplateColumns= "[index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr);"
+            <Grid
+              gridTemplateColumns="[index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr);"
               padding="0 16px"
               alignItems="center"
               color="#b3b3b3"
@@ -55,10 +64,21 @@ export function Main() {
               borderBottom="#fff"
             >
               <Text>#</Text>
-              <Text fontSize="12px" textTransform="uppercase">Título</Text>
-              <Text fontSize="12px" textTransform="uppercase">Álbum</Text>
-              <Text fontSize="12px" textTransform="uppercase">Adicionado em</Text>
-              <Image justifySelf="end" width="21px" src="/assets/icons/timeIcon.svg" alt="Ícone de um relogio" />
+              <Text fontSize="12px" textTransform="uppercase">
+                Título
+              </Text>
+              <Text fontSize="12px" textTransform="uppercase">
+                Álbum
+              </Text>
+              <Text fontSize="12px" textTransform="uppercase">
+                Adicionado em
+              </Text>
+              <Image
+                justifySelf="end"
+                width="21px"
+                src="/assets/icons/timeIcon.svg"
+                alt="Ícone de um relogio"
+              />
             </Grid>
             <ContentMusic
               numb="1"
