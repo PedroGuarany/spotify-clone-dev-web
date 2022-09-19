@@ -3,6 +3,7 @@ import { NavBarLeft } from "../Common/NavBarLeft";
 import { PointIcon } from "../Common/PointIcon";
 import { ContentMusic } from "./ContentMusic";
 import { DefaultImage } from "./DefaultImage";
+import { Header } from "./Header";
 
 export function Main() {
   return (
@@ -10,6 +11,7 @@ export function Main() {
       <Flex>
         <NavBarLeft />
         <Box width="100%" maxHeight="500px" minHeight="340px">
+        <Header />
           <Box background="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
             <Box
               padding="86px 32px 24px"
