@@ -8,10 +8,10 @@ import { Header } from "./Header";
 export function Main() {
   return (
     <>
-      <Flex>
+      <Flex height="100%">
         <NavBarLeft />
-        <Box width="100%" maxHeight="500px" minHeight="340px">
-        <Header />
+        <Box width="100%" height="100vh" overflowY="scroll">
+          <Header />
           <Box background="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
             <Box
               padding="86px 32px 24px"
@@ -34,8 +34,18 @@ export function Main() {
                     Chique e confortável como a realeza do Trap. Foto: Brandão85
                   </Text>
 
-                  <Text paddingTop="8px" fontSize="14px" display="flex" gap="4px" alignItems="center">
-                    <Link fontWeight="bold" href="/user/spotify">Spotify</Link> <PointIcon /> {"57.658"} curtidas <PointIcon /> {"50"} músicas, {"2h 33min"}
+                  <Text
+                    paddingTop="8px"
+                    fontSize="14px"
+                    display="flex"
+                    gap="4px"
+                    alignItems="center"
+                  >
+                    <Link fontWeight="bold" href="/user/spotify">
+                      Spotify
+                    </Link>{" "}
+                    <PointIcon /> {"57.658"} curtidas <PointIcon /> {"50"}{" "}
+                    músicas, {"2h 33min"}
                   </Text>
                 </Box>
               </Flex>
@@ -89,7 +99,120 @@ export function Main() {
               album={"237"}
               addIn={"13 de fev. de 2022"}
               time={"2:56"}
+              src={""}
+              alt={""}
             ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+            <ContentMusic
+              numb="1"
+              music={"Cap Way"}
+              artist={"Yunk Vino"}
+              album={"237"}
+              addIn={"13 de fev. de 2022"}
+              time={"2:56"}
+              src={""}
+              alt={""}
+            ></ContentMusic>
+
           </Box>
         </Box>
       </Flex>

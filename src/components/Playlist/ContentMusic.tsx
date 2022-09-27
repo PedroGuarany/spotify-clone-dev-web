@@ -1,7 +1,9 @@
 import { Box, Grid, Text, Image, Flex, Link } from "@chakra-ui/react";
 
 interface DefaultMusicProps {
-    numb: string;
+    numb: string,
+    src: string,
+    alt: string,
     music: string,
     artist: string,
     album: string,
@@ -9,21 +11,25 @@ interface DefaultMusicProps {
     time: string
 }
 
-export function ContentMusic({numb, music, artist, album, addIn, time}: DefaultMusicProps) {
+export function ContentMusic({numb, src, alt, music, artist, album, addIn, time}: DefaultMusicProps) {
     return (
-        <>
-            <Grid padding="0 16px" alignItems="center" gridTemplateColumns= "[index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr)" gap="16px">
+        <Box padding="6px 0"  _hover={{   backgroundColor: 'hsla(0,0%,100%,.1)' }}>
+            <Grid padding="0 16px" alignItems="center" gridTemplateColumns="[index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last]minmax(120px,1fr)" gap="16px">
                 <Text color="#b3b3b3" display="block" fontSize="16px" fontWeight="bold">{numb}</Text>
-                <Box>
-                    <Text fontWeight="400" color="white">{music}</Text>
-                    <Flex alignItems="center" flexDirection="row">
-                        <Text fontSize="14px" color="#b3b3b3"><Link href="/playlist">{artist}</Link></Text>
-                    </Flex>
+                
+                <Box display="flex" alignItems="center">
+                    <Image src={src} alt={alt} width="40px" height="40px" marginRight="16px"></Image>
+                    <Box>
+                        <Text fontWeight="400" color="white">{music}</Text>
+                        <Flex alignItems="center" flexDirection="row">
+                            <Text fontSize="14px" color="#b3b3b3"><Link href="/playlist">{artist}</Link></Text>
+                        </Flex>
+                    </Box>
                 </Box>
                 <Text fontSize="14px" color="#b3b3b3"><Link href="/playlist">{album}</Link></Text>
                 <Text fontSize="14px" color="#b3b3b3">{addIn}</Text>
                 <Text color="#b3b3b3" justifySelf="end">{time}</Text>
             </Grid>
-        </>
+        </Box>
     );
 }

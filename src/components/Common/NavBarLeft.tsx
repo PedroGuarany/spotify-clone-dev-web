@@ -5,11 +5,11 @@ export function NavBarLeft() {
   return (
     <Box
       backgroundColor="#000"
-      minWidth="241px"
+      minWidth="393px"
       paddingTop="15px"
       zIndex="3"
       position="relative"
-      height="100vh"
+      height="100%"
     >
       <Flex flexDirection="column">
         <Flex>
@@ -24,6 +24,10 @@ export function NavBarLeft() {
         <Box paddingTop="24px">
             <NavBarLeftItems src={"assets/icons/moreIcon.svg"} alt={"Icone de adicionar mais"} text={"Criar Playlist"}></NavBarLeftItems>
             <NavBarLeftItems src={"assets/icons/heartIcon.svg"} alt={"Icone de da opção de músicas curtidas"} text={"Músicas Curtidas"}></NavBarLeftItems>
+        </Box>
+
+        <Box paddingTop="24px" width="100%" height="4px" display="flex" justifyContent="center">
+          <Box background="#282828" height="1px" width="326px"></Box>
         </Box>
 
       </Flex>
