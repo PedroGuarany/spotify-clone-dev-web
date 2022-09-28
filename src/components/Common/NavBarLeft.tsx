@@ -38,7 +38,7 @@ export function NavBarLeft() {
 const NavBarLeftItems = ({src, alt, text}) => {
     return (
         <>
-        <Link display="flex" alignItems="center" flexDirection="row" gap="16px" padding="18px 36px 0 36px" height="40px" href="/playlist" color="#C7C7C7"  _hover={{ color: 'white' }}>
+        <Link display="flex" alignItems="center" flexDirection="row" gap="16px" padding="18px 36px 0 28px" height="40px" href="/playlist" color="#C7C7C7"  _hover={{ color: 'white' }}>
         <Image src={src} alt={alt} />
         <Text fontSize="14px" fontWeight="bold">
             {text}
