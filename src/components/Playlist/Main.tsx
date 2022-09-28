@@ -212,7 +212,6 @@ export function Main() {
               src={""}
               alt={""}
             ></ContentMusic>
-
           </Box>
         </Box>
       </Flex>
