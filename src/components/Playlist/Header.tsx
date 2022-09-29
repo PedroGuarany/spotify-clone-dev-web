@@ -1,3 +1,4 @@
+import { TriangleDownIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 
 export function Header() {
@@ -42,6 +43,10 @@ export function Header() {
             </Button>
           </Box>
           <Button
+            display="flex"
+            alignItems="center"
+            justifyContent="center"
+            gap="8px"
             width="115.47px"
             height="32px"
             backgroundColor="rgba(0,0,0,.7)"
@@ -52,6 +57,7 @@ export function Header() {
             <Text fontSize="14px" fontWeight="700" color="#fff">
               moises
             </Text>
+            <TriangleDownIcon marginTop="4px" color="white" height="10px" />
           </Button>
         </Flex>
       </Box>
