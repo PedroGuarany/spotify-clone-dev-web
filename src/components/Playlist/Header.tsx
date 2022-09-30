@@ -47,17 +47,22 @@ export function Header() {
             alignItems="center"
             justifyContent="center"
             gap="8px"
+            padding="0"
             width="115.47px"
             height="32px"
             backgroundColor="rgba(0,0,0,.7)"
             borderRadius="23px"
             _hover={{ backgroundColor: "#282828" }}
           >
-            <Image src="" alt="" borderRadius="50%"></Image>
+            
+            <Image src="/assets/playlist/defaultperfil.svg" alt="Imagem de perfil" borderRadius="50%"></Image>
+            
             <Text fontSize="14px" fontWeight="700" color="#fff">
               moises
             </Text>
-            <TriangleDownIcon marginTop="4px" color="white" height="10px" />
+            <Button minWidth="16px" height="10px" marginTop="4px" padding="0" background="none" _hover={{}}>
+              <TriangleDownIcon color="white" height="10px" />
+            </Button>
           </Button>
         </Flex>
       </Box>
