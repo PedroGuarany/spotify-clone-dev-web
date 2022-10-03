@@ -7,8 +7,9 @@ import { Header } from "./Header";
 
 export function Main() {
   return (
-    <>
-      <Flex height="100%">
+      <Grid gridTemplateAreas= "top-bar top-bar nav-bar main-view now-playing-bar now-playing-bar"
+            gridTemplateColumns= "auto 1fr"
+            grid-template-rows= "auto 1fr auto" height="100%">
         <NavBarLeft />
         <Box width="100%" height="100vh" overflowY="scroll">
           <Header />
@@ -214,7 +215,6 @@ export function Main() {
             ></ContentMusic>
           </Box>
         </Box>
-      </Flex>
-    </>
+      </Grid>
   );
 }

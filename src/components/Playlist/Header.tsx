@@ -8,7 +8,9 @@ export function Header() {
         padding="16px 32px"
         maxWidth="100%"
         background="rgba(255, 255, 255, 0)"
-        position="fixed"
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
       >
         <Flex width="100%" alignItems="center" justifyContent="space-between">
           <Box display="flex" justifyContent="space-between" width="80px">
