@@ -6,11 +6,14 @@ export function Header() {
     <>
       <Box
         padding="16px 32px"
-        maxWidth="100%"
+        width="100%"
         background="rgba(255, 255, 255, 0)"
         display="flex"
         alignItems="center"
         justifyContent="space-between"
+        
+        gridArea="main-view"
+        z-zIndex="2"
       >
         <Flex width="100%" alignItems="center" justifyContent="space-between">
           <Box display="flex" justifyContent="space-between" width="80px">
