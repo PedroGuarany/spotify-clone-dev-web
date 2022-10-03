@@ -8,15 +8,15 @@ import { Header } from "./Header";
 export function Main() {
   return (
     <Grid
-      gridTemplateAreas="top-bar top-bar nav-bar main-view now-playing-bar now-playing-bar"
+      gridTemplateAreas={`"top-bar top-bar" "nav-bar main-view" "now-playing-bar now-playing-bar"`}
       gridTemplateColumns="auto 1fr"
-      grid-template-rows="auto 1fr auto"
+      gridTemplateRows="auto 1fr auto"
       height="100%"
       width="100%"
     >
       <NavBarLeft />
-      <Box width="100%" height="100vh" overflowY="scroll">
-        <Header />
+      <Box width="100%" height="100vh" overflowY="scroll" gridArea="main-view">
+      
         <Box background="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
           <Box
             padding="86px 32px 24px"
@@ -214,6 +214,67 @@ export function Main() {
             src={""}
             alt={""}
           ></ContentMusic>
+          <ContentMusic
+            numb="1"
+            music={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={""}
+            alt={""}
+          ></ContentMusic>
+          <ContentMusic
+            numb="1"
+            music={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={""}
+            alt={""}
+          ></ContentMusic>
+          <ContentMusic
+            numb="1"
+            music={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={""}
+            alt={""}
+          ></ContentMusic>
+          <ContentMusic
+            numb="1"
+            music={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={""}
+            alt={""}
+          ></ContentMusic>
+          <ContentMusic
+            numb="1"
+            music={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={""}
+            alt={""}
+          ></ContentMusic>
+          <ContentMusic
+            numb="1"
+            music={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={""}
+            alt={""}
+          ></ContentMusic>
+
         </Box>
       </Box>
     </Grid>

@@ -11,9 +11,9 @@ export function Header() {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        
+        position="relative"
         gridArea="main-view"
-        z-zIndex="2"
+        
       >
         <Flex width="100%" alignItems="center" justifyContent="space-between">
           <Box display="flex" justifyContent="space-between" width="80px">

@@ -7,9 +7,10 @@ export function NavBarLeft() {
       backgroundColor="#000"
       minWidth="393px"
       paddingTop="15px"
-      zIndex="3"
       position="relative"
       height="100%"
+      gridArea="nav-bar"
+      zIndex="3"
     >
       <Flex flexDirection="column">
         <Flex>
