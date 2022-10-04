@@ -9,10 +9,9 @@ interface DefaultPlayingNowProps {
     name: string,
     artist: string,
     linkOfMusic: string,
-    player: AudioPlayer,
 }
 
-export function PlayingNow({ src, alt, name, artist, linkOfMusic, player }: DefaultPlayingNowProps) {
+export function PlayingNow({ src, alt, name, artist, linkOfMusic }: DefaultPlayingNowProps) {
   return (
     <>
       <Box
@@ -66,7 +65,6 @@ export function PlayingNow({ src, alt, name, artist, linkOfMusic, player }: Defa
           <Box maxWidth="722px" width="40%">
             <Flex>
                 <AudioPlayer
-                    ref={(ref) => player = ref}
                     preload='metadata'
                     src={linkOfMusic}
                 />

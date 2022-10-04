@@ -4,7 +4,6 @@ interface PlaylistBlockProps {
     id: string;
     image: string;
     name: string;
-    alt: string;
     description: string;
 }
 export function PlaylistBlock({id, image, name, description} : PlaylistBlockProps){

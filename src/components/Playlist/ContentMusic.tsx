@@ -11,7 +11,6 @@ export interface DefaultMusicProps {
   album: string;
   addIn: string;
   time: string;
-  onClick: Function;
 }
 
 export function ContentMusic({
@@ -23,11 +22,10 @@ export function ContentMusic({
   artist,
   album,
   addIn,
-  time,
-  onClick
+  time
 }: DefaultMusicProps) {
   return (
-      <Box padding="6px 0" onClick={() => onClick()} _hover={{ backgroundColor: "hsla(0,0%,100%,.1)" }}>
+      <Box padding="6px 0" _hover={{ backgroundColor: "hsla(0,0%,100%,.1)" }}>
         <Grid
           padding="0 16px"
           alignItems="center"
