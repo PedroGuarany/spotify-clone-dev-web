@@ -1,9 +1,29 @@
-import { Flex, Heading, Box, Text, Link } from "@chakra-ui/react";
+import {
+  Flex,
+  Heading,
+  Box,
+  Text,
+} from "@chakra-ui/react";
 import { PointIcon } from "../Common/PointIcon";
+import { DefaultMusicProps } from "./ContentMusic";
 import { DefaultImage } from "./DefaultImage";
+interface PlaylistProps {
+  id: string;
+  musics: DefaultMusicProps[];
+  name: string;
+  image: string;
+  alt: string;
+  description: string;
+}
 
-export function PlaylistInfo() {
-    return (
+export function PlaylistInfo({
+  id,
+  name,
+  image,
+  alt,
+  description,
+}: PlaylistProps) {
+  return (
         <Box backgroundColor="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
           <Box
             padding="86px 32px 24px"
@@ -12,20 +32,15 @@ export function PlaylistInfo() {
             marginTop="-64px"
           >
             <Flex>
-              <DefaultImage
-                src={"/assets/playlist/playlistImage.svg"}
-                alt={"Imagem da playlist: o drip"}
-              />
+              <DefaultImage src={image} alt={alt} />
               <Box color="white" width="auto" margin="18px 0 0 24px">
                 <Text textTransform="uppercase" paddingTop="10px">
                   playlist
                 </Text>
                 <Heading margin="8px 0 12px" fontSize="98px" fontWeight="900">
-                  O Drip
+                  {name}
                 </Heading>
-                <Text color="#b3b3b3">
-                  Chique e confortável como a realeza do Trap. Foto: Brandão85
-                </Text>
+                <Text color="#b3b3b3">{description}</Text>
 
                 <Text
                   paddingTop="8px"
@@ -34,15 +49,12 @@ export function PlaylistInfo() {
                   gap="4px"
                   alignItems="center"
                 >
-                  <Link fontWeight="bold" href="/user/spotify">
-                    Spotify
-                  </Link>
-                  <PointIcon /> {"57.658"} curtidas <PointIcon /> {"50"}{" "}
-                  músicas, {"2h 33min"}
+                  Spotify
+                  <PointIcon /> {"0"} curtidas <PointIcon /> {"50"} músicas,{" 2h 33min"}
                 </Text>
               </Box>
             </Flex>
           </Box>
         </Box>
-    );
+  );
 }
