@@ -253,7 +253,7 @@ export function Main() {
           ></ContentMusic>
         </Box>
       </Box>
-      <PlayingNow />
+      <PlayingNow number={""} src={"/assets/playlist/albumImage.svg"} alt={"album 237"} name={"Cap Way"} artist={"Yunk Vino"} album={""} addIn={""} time={""} />
     </Grid>
   );
 }
