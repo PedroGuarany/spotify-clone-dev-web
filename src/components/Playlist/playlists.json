@@ -1,0 +1,114 @@
+[
+    {
+        "id": "abc1",
+        "musics": [
+            {
+                "name": "Cap Way",
+                "artist": "Yunk Vino",
+                "album": "237",
+                "addIn": "13 de fev. de 2022",
+                "time": "256",
+                "src": "/assets/playlist/albumImage.svg",
+                "alt": "237 imagem"    
+            }
+        ]
+    },
+    {
+        "id": "abc2",
+        "musics": [
+            {
+                "name": "Cap Way",
+                "artist": "Yunk Vino",
+                "album": "237",
+                "addIn": "13 de fev. de 2022",
+                "time": "256",
+                "src": "/assets/playlist/albumImage.svg",
+                "alt": "237 imagem"    
+            }
+        ]
+    },
+    {
+        "id": "abc3",
+        "musics": [
+            {
+                "name": "Cap Way",
+                "artist": "Yunk Vino",
+                "album": "237",
+                "addIn": "13 de fev. de 2022",
+                "time": "256",
+                "src": "/assets/playlist/albumImage.svg",
+                "alt": "237 imagem"    
+            }
+        ]
+    },
+    {
+        "id": "abc4",
+        "musics": [
+            {
+                "name": "Cap Way",
+                "artist": "Yunk Vino",
+                "album": "237",
+                "addIn": "13 de fev. de 2022",
+                "time": "256",
+                "src": "/assets/playlist/albumImage.svg",
+                "alt": "237 imagem"    
+            }
+        ]
+    },
+    {
+        "id": "abc5",
+        "musics": [
+            {
+                "name": "Cap Way",
+                "artist": "Yunk Vino",
+                "album": "237",
+                "addIn": "13 de fev. de 2022",
+                "time": "256",
+                "src": "/assets/playlist/albumImage.svg",
+                "alt": "237 imagem"    
+            }
+        ]
+    },
+    {
+        "id": "abc6",
+        "musics": [
+            {
+                "name": "Cap Way",
+                "artist": "Yunk Vino",
+                "album": "237",
+                "addIn": "13 de fev. de 2022",
+                "time": "256",
+                "src": "/assets/playlist/albumImage.svg",
+                "alt": "237 imagem"    
+            }
+        ]
+    },
+    {
+        "id": "abc7",
+        "musics": [
+            {
+                "name": "Cap Way",
+                "artist": "Yunk Vino",
+                "album": "237",
+                "addIn": "13 de fev. de 2022",
+                "time": "256",
+                "src": "/assets/playlist/albumImage.svg",
+                "alt": "237 imagem"    
+            }
+        ]
+    },
+    {
+        "id": "abc8",
+        "musics": [
+            {
+                "name": "Cap Way",
+                "artist": "Yunk Vino",
+                "album": "237",
+                "addIn": "13 de fev. de 2022",
+                "time": "256",
+                "src": "/assets/playlist/albumImage.svg",
+                "alt": "237 imagem"    
+            }
+        ]
+    }
+]

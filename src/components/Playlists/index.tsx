@@ -2,7 +2,7 @@ import { Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react';
 import { LoggedHeader } from '../Common/LoggedHeader';
 import { NavBarLeft } from '../Common/NavBarLeft';
 import { PlaylistBlock } from './PlaylistBlock';
-import PlaylistsData from './playlists.json';
+import PlaylistsData from './playlistsThumbs.json';
 export function PlaylistsComponent() {
     return (
         <Box h="100vh">

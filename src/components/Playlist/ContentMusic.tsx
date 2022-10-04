@@ -29,11 +29,11 @@ export function ContentMusic({
         gridTemplateColumns="[index] 4ch [first] 6fr [var1] 4fr [var2] 3fr [last]minmax(120px,1fr)"
         gap="16px"
       >
-        <Text color="#b3b3b3" display="block" fontSize="16px" fontWeight="bold" width="4ch" cursor="default">
-          <Flex justifyContent="center">
+        <Flex justifyContent="center">
+          <Text color="#b3b3b3" display="block" fontSize="16px" fontWeight="bold" width="4ch" cursor="default">
             {number}
-          </Flex>
-        </Text>
+          </Text>
+        </Flex>
 
         <Box display="flex" alignItems="center">
           <Image

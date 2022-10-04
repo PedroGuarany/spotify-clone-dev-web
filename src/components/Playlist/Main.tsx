@@ -169,7 +169,6 @@ export function Main() {
       </Grid>
 
       {musics.map((music, i) => (
-        // eslint-disable-next-line react/jsx-key
         <ContentMusic
           number={i + 1}
           name={music.name}
