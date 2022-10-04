@@ -9,21 +9,25 @@ import {
 import { ReactNode } from "react";
 
 interface FormOptionProps {
+  name: string;
   label: string;
   placeholder: string;
   type: string;
   children?: ReactNode;
+  handleChangeCallback: Function;
 }
 
 export function FormOption({
+  name,
   label,
   placeholder,
   type,
   children,
+  handleChangeCallback
 }: FormOptionProps) {
   return (
     <Box>
-      <FormControl>
+      <FormControl id={name}>
         <FormLabel fontWeight="bold">{label}</FormLabel>
         <Input
           placeholder={placeholder}
@@ -34,6 +38,7 @@ export function FormOption({
           _hover={{
             borderColor: "#000",
           }}
+          onChange={event => handleChangeCallback(event.currentTarget.value)}
         />
         {children}
       </FormControl>

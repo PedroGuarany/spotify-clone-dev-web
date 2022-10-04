@@ -1,7 +1,7 @@
 import { Box, Flex, Text, Image, Link, Button } from "@chakra-ui/react";
 import { ReactNode } from "react";
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
+import AudioPlayer from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 
 interface DefaultPlayingNowProps {
     src: string,

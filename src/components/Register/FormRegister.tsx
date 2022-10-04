@@ -9,17 +9,66 @@ import {
   Checkbox,
   Link,
   Text,
+  Toast,
+  useToast,
 } from "@chakra-ui/react";
 import { Button } from "../Common/DefaultButton";
+import { useState } from "react";
+import { redirect } from "next/dist/server/api-utils";
+import {useRouter} from 'next/router'
+
+interface FormProps{
+  email: string;
+  name: string;
+  birthdate: string;
+}
 
 export function FormRegister() {
+  const router = useRouter();
+  const [email, setEmail] = useState("");
+  const [confirmationEmail, setConfirmationEmail] = useState("");
+  const [name, setName] = useState("");
+  const [birthdate, setBirthdate] = useState("");
+  const [gender, setGender] = useState("1");
+  const toast = useToast();
+   
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(gender);
+    if(email != confirmationEmail){
+      toast({ title: "Registro",  description: "Os emails não são idênticos", duration : 3000, status: "warning", position: "top-right"});
+      return;
+    }
+    
+    if(email == "" || confirmationEmail == "" || name == "" || birthdate == "" || gender == ""){
+      toast({ title: "Registro",  description: "Por favor, preencha todos os campos", duration : 3000, status: "error", position: "top-right"});
+      return;
+    }
+  
+    toast({title: "Registro", description: "Cadastro realizado", status: "success", duration: 3000, isClosable: true, position: "top-right"})
+    setEmail("");
+    setBirthdate("");
+    setGender("1");
+    setConfirmationEmail("");
+    setName("");
+
+    console.log({
+      email: email,
+      name: name,
+      birthdate: birthdate,
+      gender: gender
+    })
+    router.push("/");
+  }
   return (
     <Box width="100%" paddingBottom="8.125rem">
-      <Flex direction="column" gap="1.5rem">
+      <Flex direction="column" gap="1.5rem" as="form" onSubmit={handleSubmit}>
         <FormOption
+          name="email"
           label="Qual é o seu e-mail?"
           placeholder="Insira seu e-mail"
           type="email"
+          handleChangeCallback={setEmail}
         >
           <FormHelperText color="#117a37" textDecoration="underline">
             <Link href="#">Usar número de telefone.</Link>
@@ -27,26 +76,32 @@ export function FormRegister() {
         </FormOption>
 
         <FormOption
+          name="emailConfirmation"
           label="Confirme seu e-mail"
           placeholder="Insira o email novamente."
           type="email"
+          handleChangeCallback={setConfirmationEmail}
         />
 
         <FormOption
+          name="name"
           label="Como devemos chamar você?"
           placeholder="Insira um nome de perfil"
           type="text"
+          handleChangeCallback={setName}
         >
           <FormHelperText>Isso aparece no seu perfil.</FormHelperText>
         </FormOption>
 
         <FormOption
+          name="birthdate"
           label="Qual a sua data de nascimento?"
           placeholder=""
           type="date"
+          handleChangeCallback={setBirthdate}
         />
 
-        <RadioGroup>
+        <RadioGroup onChange={setGender} value={gender}>
           <FormLabel fontWeight="bold">Qual é o seu gênero?</FormLabel>
           <Flex gap="2.5rem">
             <Radio size="md" colorScheme="green" value="1">
@@ -98,6 +153,7 @@ export function FormRegister() {
               text="Inscrever-se"
               color="greenX.100"
               fontColor="black"
+              type="submit"
             ></Button>
           </Flex>
           <Text textAlign="center">
