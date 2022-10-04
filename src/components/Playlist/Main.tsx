@@ -6,7 +6,6 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import { ContentMusic, DefaultMusicProps } from "./ContentMusic";
-import AudioPlayer from 'react-h5-audio-player';
 
 
 
@@ -24,8 +23,7 @@ const musics: DefaultMusicProps[] = [
   },
 ];
 
-export function Main(player: AudioPlayer) {
-  let handleClick = () => console.log(player);
+export function Main() {
   
   return (
     <Box background="#121212" padding="32px 32px">
@@ -60,7 +58,6 @@ export function Main(player: AudioPlayer) {
 
       {musics.map((music, i) => (
         <ContentMusic
-          onClick={handleClick}
           key={i + 1}
           number={i + 1}
           src={music.src}
