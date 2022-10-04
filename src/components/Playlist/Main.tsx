@@ -7,13 +7,14 @@ import {
   Grid,
   Link,
   Button,
+  GridItem,
 } from "@chakra-ui/react";
 import { NavBarLeft } from "../Common/NavBarLeft";
 import { PlayingNow } from "../Common/PlayingNow";
 import { PointIcon } from "../Common/PointIcon";
 import { ContentMusic } from "./ContentMusic";
 import { DefaultImage } from "./DefaultImage";
-import { Header } from "./Header";
+import { LoggedHeader } from "../Common/LoggedHeader";
 
 export function Main() {
   return (
@@ -24,9 +25,11 @@ export function Main() {
       height="100%"
       width="100%"
     >
-      <NavBarLeft />
+      <GridItem area="nav-bar">
+        <NavBarLeft/>
+      </GridItem>
       <Box width="100%" height="100vh" overflowY="scroll" gridArea="main-view">
-      <Header />
+      <LoggedHeader />
         <Box background="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
           
           <Box

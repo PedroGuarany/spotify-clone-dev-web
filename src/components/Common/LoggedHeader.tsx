@@ -1,7 +1,7 @@
 import { TriangleDownIcon } from "@chakra-ui/icons";
 import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 
-export function Header() {
+export function LoggedHeader() {
   return (
     <>
       <Box
@@ -13,8 +13,6 @@ export function Header() {
         justifyContent="space-between"
         position="sticky"
         top="0"
-        gridArea="main-view"
-        
       >
         <Flex width="100%" alignItems="center" justifyContent="space-between">
           <Box display="flex" justifyContent="space-between" width="80px">
@@ -60,15 +58,11 @@ export function Header() {
             borderRadius="23px"
             _hover={{ backgroundColor: "#282828" }}
           >
-            
             <Image src="/assets/playlist/defaultperfil.svg" alt="Imagem de perfil" borderRadius="50%"></Image>
-            
             <Text fontSize="14px" fontWeight="700" color="#fff">
               moises
             </Text>
-            <Button minWidth="16px" height="10px" marginTop="4px" padding="0" background="none" _hover={{}}>
-              <TriangleDownIcon color="white" height="10px" />
-            </Button>
+            <TriangleDownIcon color="white" height="10px" />
           </Button>
         </Flex>
       </Box>

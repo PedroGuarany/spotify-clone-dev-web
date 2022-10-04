@@ -9,7 +9,6 @@ export function NavBarLeft() {
       paddingTop="15px"
       position="relative"
       height="100%"
-      gridArea="nav-bar"
       zIndex="3"
     >
       <Flex flexDirection="column">
@@ -71,7 +70,7 @@ const NavBarLeftItems = ({ src, alt, text }) => {
         gap="16px"
         padding="18px 36px 0 28px"
         height="40px"
-        href="/playlist"
+        href=""
         color="#C7C7C7"
         _hover={{ color: "white" }}
       >
