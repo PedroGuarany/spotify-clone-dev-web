@@ -11,9 +11,131 @@ import {
 import { NavBarLeft } from "../Common/NavBarLeft";
 import { PlayingNow } from "../Common/PlayingNow";
 import { PointIcon } from "../Common/PointIcon";
-import { ContentMusic } from "./ContentMusic";
+import { ContentMusic, DefaultMusicProps } from "./ContentMusic";
 import { DefaultImage } from "./DefaultImage";
 import { Header } from "./Header";
+
+const musics: DefaultMusicProps[] = [
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+  {
+    name: "Cap Way",
+    artist: "Yunk Vino",
+    album: "237",
+    addIn: "13 de fev. de 2022",
+    time: "2:56",
+    src: "/assets/playlist/albumImage.svg",
+    alt: "237 imagem",
+  },
+
+
+]
 
 export function Main() {
   return (
@@ -32,7 +154,7 @@ export function Main() {
         artist={"Yunk Vino"}
         linkOfMusic={"/assets/playlist/musica001.mp3"}
       />
-      <Box width="100%" height="100vh" gridArea="main-view">
+      <Box width="100%" height="100vh" overflowY="scroll" gridArea="main-view" paddingBottom="68px">
         <Header />
         <Box backgroundColor="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
           <Box
@@ -157,106 +279,7 @@ export function Main() {
             src={"/assets/playlist/albumImage.svg"}
             alt={"237 imagem"}
           ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
-          <ContentMusic
-            number="1"
-            name={"Cap Way"}
-            artist={"Yunk Vino"}
-            album={"237"}
-            addIn={"13 de fev. de 2022"}
-            time={"2:56"}
-            src={"/assets/playlist/albumImage.svg"}
-            alt={"237 imagem"}
-          ></ContentMusic>
+    
         </Box>
       </Box>
     </Grid>

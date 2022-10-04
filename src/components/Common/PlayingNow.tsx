@@ -63,9 +63,13 @@ export function PlayingNow({ src, alt, name, artist, linkOfMusic }: DefaultPlayi
           <Box maxWidth="722px" width="40%">
             <Flex>
                 <AudioPlayer
+                    preload='metadata'
                     src={linkOfMusic}
                 />
             </Flex>
+          </Box>
+          <Box minWidth="180px">
+
           </Box>
         </Flex>
       </Box>
