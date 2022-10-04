@@ -11,7 +11,6 @@ import { ContentMusic, DefaultMusicProps } from "./ContentMusic";
 
 const musics: DefaultMusicProps[] = [
   {
-    onClick: null,
     name: "Cap Way",
     src: "/assets/playlist/musica001.mp3",
     artist: "Yunk Vino",

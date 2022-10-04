@@ -11,7 +11,6 @@ export interface DefaultMusicProps {
   album: string;
   addIn: string;
   time: string;
-  onClick: Function;
 }
 
 
