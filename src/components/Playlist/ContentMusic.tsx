@@ -1,10 +1,10 @@
 import { Box, Grid, Text, Image, Flex, Link } from "@chakra-ui/react";
 
 interface DefaultMusicProps {
-  numb: string;
+  number: string;
   src: string;
   alt: string;
-  music: string;
+  name: string;
   artist: string;
   album: string;
   addIn: string;
@@ -12,10 +12,10 @@ interface DefaultMusicProps {
 }
 
 export function ContentMusic({
-  numb,
+  number,
   src,
   alt,
-  music,
+  name,
   artist,
   album,
   addIn,
@@ -30,7 +30,7 @@ export function ContentMusic({
         gap="16px"
       >
         <Text color="#b3b3b3" display="block" fontSize="16px" fontWeight="bold">
-          {numb}
+          {number}
         </Text>
 
         <Box display="flex" alignItems="center">
@@ -43,7 +43,7 @@ export function ContentMusic({
           ></Image>
           <Box>
             <Text fontWeight="400" color="white">
-              {music}
+              {name}
             </Text>
             <Flex alignItems="center" flexDirection="row">
               <Text fontSize="14px" color="#b3b3b3">
