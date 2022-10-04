@@ -1,5 +1,15 @@
-import { Box, Flex, Heading, Text, Image, Grid, Link, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Grid,
+  Link,
+  Button,
+} from "@chakra-ui/react";
 import { NavBarLeft } from "../Common/NavBarLeft";
+import { PlayingNow } from "../Common/PlayingNow";
 import { PointIcon } from "../Common/PointIcon";
 import { ContentMusic } from "./ContentMusic";
 import { DefaultImage } from "./DefaultImage";
@@ -16,11 +26,14 @@ export function Main() {
     >
       <NavBarLeft />
       <Box width="100%" height="100vh" overflowY="scroll" gridArea="main-view">
+      <Header />
         <Box background="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
+          
           <Box
             padding="86px 32px 24px"
             max-width="100%"
             backgroundColor="rgb(32, 72, 48)"
+            marginTop="-64px"
           >
             <Flex>
               <DefaultImage
@@ -57,18 +70,46 @@ export function Main() {
         </Box>
         <Box backgroundColor="black" width="100%" padding="24px 32px">
           <Flex gap="16px" alignItems="center">
-            <Button width="56px" height="56px" padding="0" borderRadius="50%" background="transparent" _hover={{}} _active={{}}>
+            <Button
+              width="56px"
+              height="56px"
+              padding="0"
+              borderRadius="50%"
+              background="transparent"
+              _hover={{}}
+              _active={{}}
+            >
               <Image
                 src="/assets/icons/playIcon.svg"
                 alt="Ícone de play"
                 _hover={{ transform: "scale(1.04)" }}
               />
             </Button>
-            <Button width="32px" height="32px" padding="0" background="transparent" _hover={{}} _active={{}}>
-                <Image src="/assets/icons/likePlaylist.svg" alt="icone de like"></Image>
+            <Button
+              width="32px"
+              height="32px"
+              padding="0"
+              background="transparent"
+              _hover={{}}
+              _active={{}}
+            >
+              <Image
+                src="/assets/icons/likePlaylist.svg"
+                alt="icone de like"
+              ></Image>
             </Button>
-            <Button width="32px" height="32px" padding="0" background="transparent" _hover={{}} _active={{}}>
-              <Image src="/assets/icons/optionsICon.svg" alt="Ícone de opções" />
+            <Button
+              width="32px"
+              height="32px"
+              padding="0"
+              background="transparent"
+              _hover={{}}
+              _active={{}}
+            >
+              <Image
+                src="/assets/icons/optionsICon.svg"
+                alt="Ícone de opções"
+              />
             </Button>
           </Flex>
         </Box>
@@ -110,8 +151,109 @@ export function Main() {
             src={"/assets/playlist/albumImage.svg"}
             alt={"237 imagem"}
           ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
+          <ContentMusic
+            number="1"
+            name={"Cap Way"}
+            artist={"Yunk Vino"}
+            album={"237"}
+            addIn={"13 de fev. de 2022"}
+            time={"2:56"}
+            src={"/assets/playlist/albumImage.svg"}
+            alt={"237 imagem"}
+          ></ContentMusic>
         </Box>
       </Box>
+      <PlayingNow />
     </Grid>
   );
 }

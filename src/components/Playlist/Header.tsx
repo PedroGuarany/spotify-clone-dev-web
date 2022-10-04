@@ -11,7 +11,8 @@ export function Header() {
         display="flex"
         alignItems="center"
         justifyContent="space-between"
-        position="relative"
+        position="sticky"
+        top="0"
         gridArea="main-view"
         
       >
