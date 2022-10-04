@@ -87,7 +87,7 @@ const NavbarItems = () => {
       <NavigationOption link={"/register"}>
         <Text text="Inscrever-se"></Text>
       </NavigationOption>
-      <NavigationOption link={"/playlist"}>
+      <NavigationOption link={"/playlists"}>
         <Text text="Entrar"></Text>
       </NavigationOption>
     </>

@@ -7,13 +7,14 @@ import {
   Grid,
   Link,
   Button,
+  GridItem,
 } from "@chakra-ui/react";
 import { NavBarLeft } from "../Common/NavBarLeft";
 import { PlayingNow } from "../Common/PlayingNow";
 import { PointIcon } from "../Common/PointIcon";
 import { ContentMusic, DefaultMusicProps } from "./ContentMusic";
 import { DefaultImage } from "./DefaultImage";
-import { Header } from "./Header";
+import { LoggedHeader } from "../Common/LoggedHeader";
 
 const musics: DefaultMusicProps[] = [
   {

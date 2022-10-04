@@ -4,7 +4,6 @@ import { HeaderRegister } from "./HeaderRegister";
 
 export function Register() {
     return (
-        
         <>
         <Flex align="center"
         justify="center"
@@ -13,8 +12,8 @@ export function Register() {
         width="28rem"
         paddingRight={[23, 23, 23, 0]}
         paddingLeft={[23, 23, 23, 0]}>
-        <HeaderRegister />
-        <FormRegister />
+            <HeaderRegister />
+            <FormRegister />
         </Flex>
         </>
     );
