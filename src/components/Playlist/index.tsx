@@ -32,7 +32,7 @@ export function Playlist() {
         paddingBottom="72px"
       >
         <LoggedHeader />
-        <PlaylistInfo />
+        <PlaylistInfo id={""} name={""} image={""} description={""} musics={[]} alt={""} />
         <Box backgroundColor="black" width="100%" padding="24px 32px">
           <Flex gap="16px" alignItems="center">
             <Button

@@ -13,8 +13,6 @@ export interface DefaultMusicProps {
   time: string;
 }
 
-
-
 export function ContentMusic({
   number,
   image,
