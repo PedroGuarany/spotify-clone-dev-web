@@ -9,10 +9,10 @@ import { DefaultMusicProps } from "./ContentMusic";
 import { createRef } from "react";
 
 let player;
-export function Playlist(query) {
+export function PlaylistComponent(query) {
   const playlist = playlistsData.find(playlist => playlist.id === query.id);
   player = createRef();
-  
+
   if(!playlist) return;
 
   const onClickCallback = (music: DefaultMusicProps) => { console.log(player)}

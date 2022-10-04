@@ -1,14 +1,14 @@
 import { Box, Text } from "@chakra-ui/react";
 import { useRouter } from "next/router";
-import { Playlist } from "../../components/Playlist";
+import { PlaylistComponent } from "../../components/Playlist";
 
-export default function playlist() {
+export default function Playlist() {  
     const router = useRouter();
     const {id} = router.query;
     
     return (
       <Box width="100%" height="100vh" background={"#fff"}>
-        <Playlist id={id}/>
+        <PlaylistComponent id={id}/>
       </Box>
   );
 }
