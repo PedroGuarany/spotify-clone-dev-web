@@ -1,7 +1,7 @@
 import { Box, Grid, Text, Image, Flex, Link } from "@chakra-ui/react";
 
-export default interface DefaultMusicProps {
-  number: string;
+export interface DefaultMusicProps {
+  number?: string;
   src: string;
   alt: string;
   name: string;
@@ -29,7 +29,7 @@ export function ContentMusic({
         gridTemplateColumns="[index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last]minmax(120px,1fr)"
         gap="16px"
       >
-        <Text color="#b3b3b3" display="block" fontSize="16px" fontWeight="bold">
+        <Text color="#b3b3b3" display="block" fontSize="16px" fontWeight="bold" cursor="default">
           {number}
         </Text>
 
@@ -42,7 +42,7 @@ export function ContentMusic({
             marginRight="16px"
           ></Image>
           <Box>
-            <Text fontWeight="400" color="white">
+            <Text fontWeight="400" color="white" cursor="default">
               {name}
             </Text>
             <Flex alignItems="center" flexDirection="row">
