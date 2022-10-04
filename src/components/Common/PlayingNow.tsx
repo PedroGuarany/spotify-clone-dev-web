@@ -1,9 +1,16 @@
 import { Box, Flex, Text, Image, Link, Button } from "@chakra-ui/react";
-import DefaultMusicProps from "../Playlist/ContentMusic";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
-export function PlayingNow({ src, alt, name, artist }: DefaultMusicProps) {
+interface DefaultPlayingNowProps {
+    src: string,
+    alt: string,
+    name: string,
+    artist: string,
+    linkOfMusic: string
+}
+
+export function PlayingNow({ src, alt, name, artist, linkOfMusic }: DefaultPlayingNowProps) {
   return (
     <>
       <Box
@@ -56,7 +63,7 @@ export function PlayingNow({ src, alt, name, artist }: DefaultMusicProps) {
           <Box maxWidth="722px" width="40%">
             <Flex>
                 <AudioPlayer
-                    src="/assets/playlist/musica001.mp3"
+                    src={linkOfMusic}
                 />
             </Flex>
           </Box>

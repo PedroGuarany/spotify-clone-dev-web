@@ -25,13 +25,19 @@ export function Main() {
       width="100%"
     >
       <NavBarLeft />
-      <Box width="100%" height="100vh" overflowY="scroll" gridArea="main-view">
-      <Header />
-        <Box background="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
-          
+      <PlayingNow
+        src={"/assets/playlist/albumImage.svg"}
+        alt={"album 237"}
+        name={"Cap Way"}
+        artist={"Yunk Vino"}
+        linkOfMusic={"/assets/playlist/musica001.mp3"}
+      />
+      <Box width="100%" height="100vh" gridArea="main-view">
+        <Header />
+        <Box backgroundColor="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
           <Box
             padding="86px 32px 24px"
-            max-width="100%"
+            maxWidth="100%"
             backgroundColor="rgb(32, 72, 48)"
             marginTop="-64px"
           >
@@ -253,7 +259,6 @@ export function Main() {
           ></ContentMusic>
         </Box>
       </Box>
-      <PlayingNow src={"/assets/playlist/albumImage.svg"} alt={"album 237"} name={"Cap Way"} artist={"Yunk Vino"} album={""} addIn={""} time={""} number={""} />
     </Grid>
   );
 }

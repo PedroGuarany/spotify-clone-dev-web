@@ -1,6 +1,6 @@
 import { Box, Grid, Text, Image, Flex, Link } from "@chakra-ui/react";
 
-export default interface DefaultMusicProps {
+interface DefaultMusicProps {
   number: string;
   src: string;
   alt: string;
