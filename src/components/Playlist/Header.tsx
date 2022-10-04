@@ -66,9 +66,7 @@ export function Header() {
             <Text fontSize="14px" fontWeight="700" color="#fff">
               moises
             </Text>
-            <Button minWidth="16px" height="10px" marginTop="4px" padding="0" background="none" _hover={{}}>
-              <TriangleDownIcon color="white" height="10px" />
-            </Button>
+            <TriangleDownIcon color="white" height="10px" />
           </Button>
         </Flex>
       </Box>
