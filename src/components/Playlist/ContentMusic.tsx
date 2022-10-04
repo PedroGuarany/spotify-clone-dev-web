@@ -1,4 +1,5 @@
-import { Box, Grid, Text, Image, Flex, Link } from "@chakra-ui/react";
+import { Box, Grid, Text, Image, Flex } from "@chakra-ui/react";
+import { NavigationOption } from "../Common/NavigationOption";
 
 export interface DefaultMusicProps {
   number?: number;
@@ -10,7 +11,10 @@ export interface DefaultMusicProps {
   album: string;
   addIn: string;
   time: string;
+  onClick: Function;
 }
+
+
 
 export function ContentMusic({
   number,
@@ -22,10 +26,10 @@ export function ContentMusic({
   album,
   addIn,
   time,
+  onClick
 }: DefaultMusicProps) {
   return (
-    <Link href={src}>
-      <Box padding="6px 0" _hover={{ backgroundColor: "hsla(0,0%,100%,.1)" }}>
+      <Box padding="6px 0" onClick={() => onClick()} _hover={{ backgroundColor: "hsla(0,0%,100%,.1)" }}>
         <Grid
           padding="0 16px"
           alignItems="center"
@@ -50,15 +54,11 @@ export function ContentMusic({
                 {name}
               </Text>
               <Flex alignItems="center" flexDirection="row">
-                <Text fontSize="14px" color="#b3b3b3">
-                  <Link href="/playlist">{artist}</Link>
-                </Text>
+                <NavigationOption link={"/playlist"}><Text fontSize="14px" color="#b3b3b3">{artist}</Text></NavigationOption>
               </Flex>
             </Box>
           </Box>
-          <Text fontSize="14px" color="#b3b3b3">
-            <Link href="/playlist">{album}</Link>
-          </Text>
+          <NavigationOption link={"/playlist"}><Text fontSize="14px" color="#b3b3b3">{album}</Text></NavigationOption>
           <Text fontSize="14px" color="#b3b3b3">
             {addIn}
           </Text>
@@ -67,6 +67,5 @@ export function ContentMusic({
           </Text>
         </Grid>
       </Box>
-    </Link>
   );
 }

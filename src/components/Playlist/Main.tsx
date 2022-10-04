@@ -6,9 +6,13 @@ import {
   Grid,
 } from "@chakra-ui/react";
 import { ContentMusic, DefaultMusicProps } from "./ContentMusic";
+import AudioPlayer from 'react-h5-audio-player';
+
+
 
 const musics: DefaultMusicProps[] = [
   {
+    onClick: null,
     name: "Cap Way",
     src: "/assets/playlist/musica001.mp3",
     artist: "Yunk Vino",
@@ -20,7 +24,9 @@ const musics: DefaultMusicProps[] = [
   },
 ];
 
-export function Main() {
+export function Main(player: AudioPlayer) {
+  let handleClick = () => console.log(player);
+  
   return (
     <Box background="#121212" padding="32px 32px">
       <Grid
@@ -54,6 +60,7 @@ export function Main() {
 
       {musics.map((music, i) => (
         <ContentMusic
+          onClick={handleClick}
           key={i + 1}
           number={i + 1}
           src={music.src}

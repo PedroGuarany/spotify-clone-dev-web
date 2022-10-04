@@ -1,4 +1,5 @@
 import { Box, Flex, Text, Image, Link, Button } from "@chakra-ui/react";
+import { ReactNode } from "react";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
@@ -7,10 +8,11 @@ interface DefaultPlayingNowProps {
     alt: string,
     name: string,
     artist: string,
-    linkOfMusic: string
+    linkOfMusic: string,
+    player: AudioPlayer,
 }
 
-export function PlayingNow({ src, alt, name, artist, linkOfMusic }: DefaultPlayingNowProps) {
+export function PlayingNow({ src, alt, name, artist, linkOfMusic, player }: DefaultPlayingNowProps) {
   return (
     <>
       <Box
@@ -19,6 +21,7 @@ export function PlayingNow({ src, alt, name, artist, linkOfMusic }: DefaultPlayi
         gridArea="now-playing-bar"
         position="fixed"
         bottom="0"
+        
       >
         <Flex
           height="90px"
@@ -63,6 +66,7 @@ export function PlayingNow({ src, alt, name, artist, linkOfMusic }: DefaultPlayi
           <Box maxWidth="722px" width="40%">
             <Flex>
                 <AudioPlayer
+                    ref={(ref) => player = ref}
                     preload='metadata'
                     src={linkOfMusic}
                 />

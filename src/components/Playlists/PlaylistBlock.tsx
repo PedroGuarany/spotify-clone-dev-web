@@ -4,6 +4,7 @@ interface PlaylistBlockProps {
     id: string;
     image: string;
     name: string;
+    alt: string;
     description: string;
 }
 export function PlaylistBlock({id, image, name, description} : PlaylistBlockProps){
@@ -20,7 +21,7 @@ export function PlaylistBlock({id, image, name, description} : PlaylistBlockProp
                     padding="0.9rem"
                     _hover={{backgroundColor: "#282828"}}
                     transition="all 300ms">
-                        <Image src={image} borderRadius="0.25rem"/>
+                        <Image src={image} alt="alt" borderRadius="0.25rem"/>
                         <Text color="#fff" fontWeight="700" fontSize="1rem">{name}</Text>
                         <Text color="#6a6a6a" fontSize="0.875rem">{description}</Text>
                 </Box>

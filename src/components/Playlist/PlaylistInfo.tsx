@@ -36,7 +36,7 @@ export function PlaylistInfo() {
                 >
                   <Link fontWeight="bold" href="/user/spotify">
                     Spotify
-                  </Link>{" "}
+                  </Link>
                   <PointIcon /> {"57.658"} curtidas <PointIcon /> {"50"}{" "}
                   músicas, {"2h 33min"}
                 </Text>

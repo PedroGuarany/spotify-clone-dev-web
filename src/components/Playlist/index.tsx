@@ -4,6 +4,9 @@ import { PlayingNow } from "../Common/PlayingNow";
 import { LoggedHeader } from "../Common/LoggedHeader";
 import { Main } from "./Main";
 import { PlaylistInfo } from "./PlaylistInfo";
+
+let player;
+
 export function Playlist() {
   return (
     <Grid
@@ -17,6 +20,7 @@ export function Playlist() {
         <NavBarLeft />
       </GridItem>
       <PlayingNow
+        player={player}
         src={"/assets/playlist/albumImage.svg"}
         alt={"album 237"}
         name={"Cap Way"}
@@ -77,7 +81,7 @@ export function Playlist() {
             </Button>
           </Flex>
         </Box>
-        <Main />
+        <Main player={player} />
       </Box>
     </Grid>
   );
