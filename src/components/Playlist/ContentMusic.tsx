@@ -14,8 +14,6 @@ export interface DefaultMusicProps {
   onClick: Function;
 }
 
-
-
 export function ContentMusic({
   number,
   image,
