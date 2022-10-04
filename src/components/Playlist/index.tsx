@@ -1,7 +1,7 @@
-import { Box, Button, Flex, Grid, Image } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
 import { NavBarLeft } from "../Common/NavBarLeft";
 import { PlayingNow } from "../Common/PlayingNow";
-import { Header } from "./Header";
+import { LoggedHeader } from "../Common/LoggedHeader";
 import { Main } from "./Main";
 import { PlaylistInfo } from "./PlaylistInfo";
 export function Playlist() {
@@ -13,7 +13,9 @@ export function Playlist() {
       height="100%"
       width="100%"
     >
-      <NavBarLeft />
+      <GridItem area="nav-bar">
+        <NavBarLeft />
+      </GridItem>
       <PlayingNow
         src={"/assets/playlist/albumImage.svg"}
         alt={"album 237"}
@@ -28,7 +30,7 @@ export function Playlist() {
         gridArea="main-view"
         paddingBottom="72px"
       >
-        <Header />
+        <LoggedHeader />
         <PlaylistInfo />
         <Box backgroundColor="black" width="100%" padding="24px 32px">
           <Flex gap="16px" alignItems="center">
