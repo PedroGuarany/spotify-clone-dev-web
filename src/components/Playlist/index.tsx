@@ -83,7 +83,7 @@ export function PlaylistComponent(query) {
               _active={{}}
             >
               <Image
-                src="/assets/icons/optionsICon.svg"
+                src="/assets/icons/optionsIcon.svg"
                 alt="Ícone de opções"
               />
             </Button>
