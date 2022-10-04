@@ -1,11 +1,21 @@
-import { Box, Button, Flex, Grid, GridItem, Image } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import { NavBarLeft } from "../Common/NavBarLeft";
 import { PlayingNow } from "../Common/PlayingNow";
 import { LoggedHeader } from "../Common/LoggedHeader";
-import { Main } from "./Main";
+import { MusicList } from "./MusicList";
 import { PlaylistInfo } from "./PlaylistInfo";
- 
-export function Playlist() {
+import playlistsData from "./playlists.json";
+import { DefaultMusicProps } from "./ContentMusic";
+import { createRef } from "react";
+
+let player;
+export function Playlist(query) {
+  const playlist = playlistsData.find(playlist => playlist.id === query.id);
+  player = createRef();
+  
+  if(!playlist) return;
+
+  const onClickCallback = (music: DefaultMusicProps) => { console.log(player)}
   return (
     <Grid
       gridTemplateAreas={`"top-bar top-bar" "nav-bar main-view" "now-playing-bar now-playing-bar"`}
@@ -18,11 +28,11 @@ export function Playlist() {
         <NavBarLeft />
       </GridItem>
       <PlayingNow
-        src={"/assets/playlist/albumImage.svg"}
-        alt={"album 237"}
-        name={"Cap Way"}
-        artist={"Yunk Vino"}
-        linkOfMusic={"/assets/playlist/musica001.mp3"}
+        src={""}
+        alt={""}
+        name={""}
+        artist={""}
+        linkOfMusic={""}
       />
       <Box
         width="100%"
@@ -30,9 +40,10 @@ export function Playlist() {
         overflowY="scroll"
         gridArea="main-view"
         paddingBottom="72px"
+        backgroundColor="#121212"
       >
         <LoggedHeader />
-        <PlaylistInfo id={""} name={""} image={""} description={""} musics={[]} alt={""} />
+        <PlaylistInfo id={playlist.id} name={playlist.name} image={playlist.image} description={playlist.description} alt={playlist.alt} />
         <Box backgroundColor="black" width="100%" padding="24px 32px">
           <Flex gap="16px" alignItems="center">
             <Button
@@ -78,7 +89,7 @@ export function Playlist() {
             </Button>
           </Flex>
         </Box>
-        <Main />
+        <MusicList musics={playlist.musics}/>
       </Box>
     </Grid>
   );

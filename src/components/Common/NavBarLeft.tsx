@@ -17,17 +17,17 @@ export function NavBarLeft() {
         </Flex>
         <Box>
           <NavBarLeftItems
-            src={"assets/icons/homeIcon.svg"}
+            src={"/assets/icons/homeIcon.svg"}
             alt={"Ícone do home"}
             text={"Início"}
           ></NavBarLeftItems>
           <NavBarLeftItems
-            src={"assets/icons/searchIcon.svg"}
+            src={"/assets/icons/searchIcon.svg"}
             alt={"Ícone da lupa de pesquisa"}
             text={"Buscar"}
           ></NavBarLeftItems>
           <NavBarLeftItems
-            src={"assets/icons/library.svg"}
+            src={"/assets/icons/library.svg"}
             alt={"Ícone do home"}
             text={"Sua Biblioteca"}
           ></NavBarLeftItems>
@@ -35,12 +35,12 @@ export function NavBarLeft() {
 
         <Box paddingTop="24px">
           <NavBarLeftItems
-            src={"assets/icons/moreIcon.svg"}
+            src={"/assets/icons/moreIcon.svg"}
             alt={"Icone de adicionar mais"}
             text={"Criar Playlist"}
           ></NavBarLeftItems>
           <NavBarLeftItems
-            src={"assets/icons/heartIcon.svg"}
+            src={"/assets/icons/heartIcon.svg"}
             alt={"Icone de da opção de músicas curtidas"}
             text={"Músicas Curtidas"}
           ></NavBarLeftItems>

@@ -9,7 +9,7 @@ import { ContentMusic, DefaultMusicProps } from "./ContentMusic";
 
 
 
-const musics: DefaultMusicProps[] = [
+const thisMusics: DefaultMusicProps[] = [
   {
     name: "Cap Way",
     src: "/assets/playlist/musica001.mp3",
@@ -122,7 +122,7 @@ const musics: DefaultMusicProps[] = [
   },
 ];
 
-export function Main() {
+export function MusicList(musics) {
   return (
     <Box background="#121212" padding="32px 32px">
       <Grid
@@ -154,7 +154,8 @@ export function Main() {
         />
       </Grid>
 
-      {musics.map((music, i) => (
+      {musics.musics.map((music, i) => 
+        (
         <ContentMusic
           key={i + 1}
           number={i + 1}

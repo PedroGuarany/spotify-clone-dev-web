@@ -27,7 +27,7 @@ export function PlaylistsComponent() {
                         margin="2.5rem"
                     >
                         {PlaylistsData.map(playlist => 
-                        ( <PlaylistBlock id={playlist.id} image={playlist.image} name={playlist.name} description={playlist.description}></PlaylistBlock> )
+                        ( <PlaylistBlock key={playlist.id} id={playlist.id} image={playlist.image} name={playlist.name} description={playlist.description}></PlaylistBlock> )
                         )}
                     </Grid>
                 </GridItem>

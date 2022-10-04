@@ -1,49 +1,49 @@
 [
     {
         "id": "abc1",
-        "image": "assets/playlistsImages/abc1.jpg",
+        "image": "/assets/playlistsImages/abc1.jpg",
         "name": "Top hits",
         "description": "Os mais mais!"
     },
     {
         "id": "abc2",
-        "image": "assets/playlistsImages/abc2.jpg",
+        "image": "/assets/playlistsImages/abc2.jpg",
         "name": "RapCaviar",
         "description": "Novos raps"
     },
     {
         "id": "abc3",
-        "image": "assets/playlistsImages/abc3.jpg",
+        "image": "/assets/playlistsImages/abc3.jpg",
         "name": "Todos os de 2010",
         "description": "Os maiores hits dos anos 2010s"
     },
     {
         "id": "abc4",
-        "image": "assets/playlistsImages/abc4.jpg",
+        "image": "/assets/playlistsImages/abc4.jpg",
         "name": "Hits pra relaxar",
         "description": "Bora ficar calmo que #vaidarcerto"
     },
     {
         "id": "abc5",
-        "image": "assets/playlistsImages/abc5.jpg",
+        "image": "/assets/playlistsImages/abc5.jpg",
         "name": "Mood booster",
         "description": "Para melhorar o seu humor"
     },
     {
         "id": "abc6",
-        "image": "assets/playlistsImages/abc6.jpg",
+        "image": "/assets/playlistsImages/abc6.jpg",
         "name": "uh oh",
         "description": "Tate McRae"
     },
     {
         "id": "abc7",
-        "image": "assets/playlistsImages/abc7.jpg",
+        "image": "/assets/playlistsImages/abc7.jpg",
         "name": "Mega hit mix",
         "description": "Os favoritos da galera"
     },
     {
         "id": "abc8",
-        "image": "assets/playlistsImages/abc8.jpg",
+        "image": "/assets/playlistsImages/abc8.jpg",
         "name": "Chill lofi",
         "description": "As melhores para estudar"
     }

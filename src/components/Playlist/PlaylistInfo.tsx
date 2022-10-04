@@ -9,7 +9,6 @@ import { DefaultMusicProps } from "./ContentMusic";
 import { DefaultImage } from "./DefaultImage";
 interface PlaylistProps {
   id: string;
-  musics: DefaultMusicProps[];
   name: string;
   image: string;
   alt: string;
@@ -21,7 +20,7 @@ export function PlaylistInfo({
   name,
   image,
   alt,
-  description,
+  description
 }: PlaylistProps) {
   return (
         <Box backgroundColor="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
@@ -50,7 +49,7 @@ export function PlaylistInfo({
                   alignItems="center"
                 >
                   Spotify
-                  <PointIcon /> {"0"} curtidas <PointIcon /> {"50"} músicas,{" 2h 33min"}
+                  <PointIcon /> {"N"} curtidas <PointIcon /> {"N"} músicas,{"Nh Nmin"}
                 </Text>
               </Box>
             </Flex>

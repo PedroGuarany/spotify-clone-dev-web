@@ -34,14 +34,13 @@ export function FormRegister() {
    
   const handleSubmit = event => {
     event.preventDefault();
-    console.log(gender);
-    if(email != confirmationEmail){
-      toast({ title: "Registro",  description: "Os emails não são idênticos", duration : 3000, status: "warning", position: "top-right"});
-      return;
-    }
-    
     if(email == "" || confirmationEmail == "" || name == "" || birthdate == "" || gender == ""){
       toast({ title: "Registro",  description: "Por favor, preencha todos os campos", duration : 3000, status: "error", position: "top-right"});
+      return;
+    }
+
+    if(email != confirmationEmail){
+      toast({ title: "Registro",  description: "Os emails não são idênticos", duration : 3000, status: "warning", position: "top-right"});
       return;
     }
   

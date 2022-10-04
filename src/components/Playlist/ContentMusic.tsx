@@ -3,14 +3,14 @@ import { NavigationOption } from "../Common/NavigationOption";
 
 export interface DefaultMusicProps {
   number?: number;
-  image: string;
-  src: string;
-  alt: string;
   name: string;
   artist: string;
   album: string;
   addIn: string;
   time: string;
+  src: string;
+  alt: string;
+  image: string;
 }
 
 export function ContentMusic({
