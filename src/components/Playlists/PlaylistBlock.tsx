@@ -1,4 +1,5 @@
 import { Box, Image, LinkBox, LinkOverlay, Text } from "@chakra-ui/react";
+import { NavigationOption } from "../Common/NavigationOption";
 
 interface PlaylistBlockProps {
     id: string;
@@ -9,7 +10,7 @@ interface PlaylistBlockProps {
 export function PlaylistBlock({id, image, name, description} : PlaylistBlockProps){
     return (
         <LinkBox>
-            <LinkOverlay href={`/playlist/${id}`}>
+            <NavigationOption link={`/playlist/${id}`}>
                 <Box
                     bgColor="#181818"
                     borderRadius="0.25rem" 
@@ -24,7 +25,7 @@ export function PlaylistBlock({id, image, name, description} : PlaylistBlockProp
                         <Text color="#fff" fontWeight="700" fontSize="1rem">{name}</Text>
                         <Text color="#6a6a6a" fontSize="0.875rem">{description}</Text>
                 </Box>
-            </LinkOverlay>
+            </NavigationOption>
         </LinkBox>
     );
 }
