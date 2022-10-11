@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react";
 import { Button } from "../Common/DefaultButton";
 import { useState } from "react";
-import { redirect } from "next/dist/server/api-utils";
 import {useRouter} from 'next/router'
 
 interface FormProps{
@@ -34,7 +33,7 @@ export function FormRegister() {
    
   const handleSubmit = event => {
     event.preventDefault();
-    if(email == "" || confirmationEmail == "" || name == "" || birthdate == "" || gender == ""){
+    if(!email || !confirmationEmail || !name || !birthdate || !gender){
       toast({ title: "Registro",  description: "Por favor, preencha todos os campos", duration : 3000, status: "error", position: "top-right"});
       return;
     }
