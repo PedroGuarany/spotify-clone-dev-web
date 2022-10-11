@@ -31,12 +31,12 @@ export function PlaylistInfo({
             marginTop="-64px"
           >
             <Flex>
-              <DefaultImage src={image} alt={alt} />
+              <DefaultImage src={image} alt={alt}/>
               <Box color="white" width="auto" margin="18px 0 0 24px">
                 <Text textTransform="uppercase" paddingTop="10px">
                   playlist
                 </Text>
-                <Heading margin="8px 0 12px" fontSize="98px" fontWeight="900">
+                <Heading margin="8px 0 12px" fontSize={["30px", "30px", "30px", "58px", "85px","98px"]} fontWeight="900">
                   {name}
                 </Heading>
                 <Text color="#b3b3b3">{description}</Text>

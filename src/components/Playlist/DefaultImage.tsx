@@ -12,7 +12,7 @@ export function DefaultImage({
 
 }: DefaultImageProps) {
     return (
-        <Image src={src} alt={alt} width="232px">
+        <Image src={src} alt={alt} minWidth="232px" minHeight="232px">
 
         </Image>
     );

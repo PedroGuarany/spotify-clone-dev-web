@@ -6,15 +6,14 @@ import { MusicList } from "./MusicList";
 import { PlaylistInfo } from "./PlaylistInfo";
 import playlistsData from "./playlists.json";
 import { DefaultMusicProps } from "./ContentMusic";
+import { NextResponse } from "next/server";
+import { PlaylistsComponent } from "../Playlists";
 
-
-let player;
 export function PlaylistComponent(query) {
   const playlist = playlistsData.find(playlist => playlist.id === query.id);
   
-  if(!playlist) return;
+  if(!playlist) return <PlaylistsComponent></PlaylistsComponent>;
 
-  const onClickCallback = (music: DefaultMusicProps) => { console.log(player)}
   return (
     <Grid
       gridTemplateAreas={`"top-bar top-bar" "nav-bar main-view" "now-playing-bar now-playing-bar"`}

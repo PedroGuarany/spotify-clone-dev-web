@@ -16,12 +16,13 @@ export const theme = extendTheme({
     global: {
       body: {
         overflowX: "hidden",
+        backgroundColor: "black"
       },
     },
   },
   textStyles:{
     defaultText: {
-      color: "white",
+      color: "white"
     }
   }
 });

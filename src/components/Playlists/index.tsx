@@ -5,13 +5,14 @@ import { PlaylistBlock } from './PlaylistBlock';
 import PlaylistsData from './playlistsThumbs.json';
 export function PlaylistsComponent() {
     return (
-        <Box h="100vh" w="100%" bgColor="#121212">
+        <Box height="100%" width="100%" bgColor="#121212">
             <Grid
                 templateAreas={`"top-bar top-bar" "nav-bar main-view" "now-playing-bar now-playing-bar"`}
                 gridTemplateColumns={"auto 1fr"}
                 gridTemplateRows={"auto 1fr auto"}
                 height="100%"
                 width="100%"
+                minHeight="100vh"
                 >
 
                 <GridItem area="nav-bar">
