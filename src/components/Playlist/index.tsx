@@ -6,7 +6,6 @@ import { MusicList } from "./MusicList";
 import { PlaylistInfo } from "./PlaylistInfo";
 import playlistsData from "./playlists.json";
 import { DefaultMusicProps } from "./ContentMusic";
-import { NextResponse } from "next/server";
 import { PlaylistsComponent } from "../Playlists";
 
 export function PlaylistComponent(query) {

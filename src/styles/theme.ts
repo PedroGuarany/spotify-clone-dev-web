@@ -15,8 +15,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        overflowX: "hidden",
-        backgroundColor: "black"
+        overflowX: "hidden"
       },
     },
   },
