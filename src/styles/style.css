@@ -1,8 +1,45 @@
 .rhap_container {
     background-color: transparent !important;
+    width: 35px !important;
+    height: 35px !important;
     
 }
 
-.rhap_time {
-    color: #fff !important;
-}   
+.rhap_main-controls-button {
+    border-radius: 50%;
+    width: 100%;
+}
+
+.rhap_play-pause-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rhap_progress-section {
+    display: none !important;
+}
+
+.rhap_additional-controls {
+    display: none !important;
+}
+
+.rhap_rewind-button {
+    display: none !important;
+}
+
+.rhap_forward-button {
+    display: none !important;
+}
+
+.rhap_volume-controls {
+    display: none !important;
+}
+
+.rhap_container {
+    padding: 0 !important;
+}
+
+.rhap_controls-section {
+    margin: 0 !important;
+}

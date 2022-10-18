@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
 import { NavBarLeft } from "../Common/NavBarLeft";
-import { PlayingNow } from "../Common/PlayingNow";
 import { LoggedHeader } from "../Common/LoggedHeader";
 import { MusicList } from "./MusicList";
 import { PlaylistInfo } from "./PlaylistInfo";
@@ -24,13 +23,6 @@ export function PlaylistComponent(query) {
       <GridItem area="nav-bar">
         <NavBarLeft />
       </GridItem>
-      <PlayingNow
-        src={""}
-        alt={""}
-        name={""}
-        artist={""}
-        linkOfMusic={""}
-      />
       <Box
         width="100%"
         height="100vh"

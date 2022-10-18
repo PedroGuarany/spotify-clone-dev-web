@@ -7,14 +7,14 @@
         "alt": "imagem da playlist",
         "musics": [
             {
-                "name": "Cap Way",
-                "artist": "Yunk Vino",
-                "album": "237",
+                "name": "Pissy Pamper (feat. Yung Nudy)",
+                "artist": "Playboi Carti, Yung Nudy",
+                "album": "Unreleased & Loose Tracks",
                 "addIn": "13 de fev. de 2022",
-                "time": "256",
-                "src": "/assets/playlist/albumImage.svg",
-                "alt": "237 imagem",
-                "image": "/assets/playlist/playlistImage.svg"    
+                "time": "3:20",
+                "src": "/assets/playlist/musica001.mp3",
+                "alt": "imagem do álbum",
+                "image": "/assets/playlist/carti&nudy.jpg"    
             },
             {
                 "name": "Cap Way",
@@ -22,7 +22,7 @@
                 "album": "237",
                 "addIn": "13 de fev. de 2022",
                 "time": "256",
-                "src": "/assets/playlist/albumImage.svg",
+                "src": "/assets/playlist/musica002.mp3",
                 "alt": "237 imagem",
                 "image": "/assets/playlist/playlistImage.svg"    
             },
