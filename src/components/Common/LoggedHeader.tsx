@@ -27,6 +27,7 @@ export function LoggedHeader() {
               borderRadius="50%"
               opacity=".6"
               _hover={{}}
+              onClick={() => window.history.back()} 
             >
               <Image src="/assets/icons/arrowIcon.svg" alt="Seta"></Image>
             </Button>
@@ -42,6 +43,7 @@ export function LoggedHeader() {
               opacity=".6"
               transform={"rotate(180deg)"}
               _hover={{}}
+              onClick={() => window.history.forward()}
             >
               <Image src="/assets/icons/arrowIcon.svg" alt="Seta"></Image>
             </Button>

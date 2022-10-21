@@ -20,16 +20,19 @@ export function NavBarLeft() {
             src={"/assets/icons/homeIcon.svg"}
             alt={"Ícone do home"}
             text={"Início"}
+            link={"/playlists"}
           ></NavBarLeftItems>
           <NavBarLeftItems
             src={"/assets/icons/searchIcon.svg"}
             alt={"Ícone da lupa de pesquisa"}
             text={"Buscar"}
+            link={"/search"}
           ></NavBarLeftItems>
           <NavBarLeftItems
             src={"/assets/icons/library.svg"}
             alt={"Ícone do home"}
             text={"Sua Biblioteca"}
+            link={"/"}
           ></NavBarLeftItems>
         </Box>
 
@@ -38,11 +41,13 @@ export function NavBarLeft() {
             src={"/assets/icons/moreIcon.svg"}
             alt={"Icone de adicionar mais"}
             text={"Criar Playlist"}
+            link={"/"}
           ></NavBarLeftItems>
           <NavBarLeftItems
             src={"/assets/icons/heartIcon.svg"}
             alt={"Icone de da opção de músicas curtidas"}
             text={"Músicas Curtidas"}
+            link={"/"}
           ></NavBarLeftItems>
         </Box>
 
@@ -60,7 +65,7 @@ export function NavBarLeft() {
   );
 }
 
-const NavBarLeftItems = ({ src, alt, text }) => {
+const NavBarLeftItems = ({ src, alt, text, link }) => {
   return (
     <>
       <Link
@@ -70,7 +75,7 @@ const NavBarLeftItems = ({ src, alt, text }) => {
         gap="16px"
         padding="18px 36px 0 28px"
         height="40px"
-        href=""
+        href={link}
         color="#C7C7C7"
         _hover={{ color: "white" }}
       >
