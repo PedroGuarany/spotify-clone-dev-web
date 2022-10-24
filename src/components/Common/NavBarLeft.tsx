@@ -26,7 +26,7 @@ export function NavBarLeft() {
             src={"/assets/icons/searchIcon.svg"}
             alt={"Ícone da lupa de pesquisa"}
             text={"Buscar"}
-            link={"/search"}
+            link={"/Search"}
           ></NavBarLeftItems>
           <NavBarLeftItems
             src={"/assets/icons/library.svg"}
