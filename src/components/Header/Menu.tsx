@@ -74,20 +74,20 @@ export function Menu({...rest}: MenuProps) {
 const NavbarItems = () => {
   return (
     <>
-      <NavigationOption link={"/login"}>
+      <NavigationOption link={"/"}>
         <Text text="Premium"></Text>
       </NavigationOption>
       <NavigationOption link={"/support"}>
         <Text text="Suporte"></Text>
       </NavigationOption>
-      <NavigationOption link={"/login"}>
+      <NavigationOption link={"/"}>
         <Text text="Baixar"></Text>
       </NavigationOption>
       <Divider orientation="vertical" height="1rem"></Divider>
       <NavigationOption link={"/register"}>
         <Text text="Inscrever-se"></Text>
       </NavigationOption>
-      <NavigationOption link={"/playlists"}>
+      <NavigationOption link={"/login"}>
         <Text text="Entrar"></Text>
       </NavigationOption>
     </>
