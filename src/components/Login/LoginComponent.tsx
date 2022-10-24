@@ -1,6 +1,7 @@
 import { Box, Checkbox, FormHelperText, Heading, Link } from "@chakra-ui/react";
 import { FormOption } from "../Register/FormOption";
 import { Button } from "../Common/DefaultButton";
+import { Line } from "../Common/Line";
 
 export function LoginComponent() {
   return (
@@ -38,7 +39,7 @@ export function LoginComponent() {
           fontWeight="bold"
         ></Button>
       </Box>
-      <Box margin="12px 0px 20px" borderTop="1px solid rgb(217, 218, 220)"></Box>
+      <Line />
       <Box>
         <Heading fontSize="18px" textAlign="center" fontWeight="900" paddingBottom="16px">Não tem uma conta?</Heading>
         <Button text="Inscrever-se no spotify" color="transparent" fontColor="#6a6a6a" border="1px solid #878787" padding="14px 32px" letterSpacing="2px" textTransform="uppercase" width="100%" height="48px"></Button>
