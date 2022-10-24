@@ -12,7 +12,7 @@ export function Register() {
         width="28rem"
         paddingRight={[23, 23, 23, 0]}
         paddingLeft={[23, 23, 23, 0]}>
-            <HeaderRegister />
+            <HeaderRegister text={"Inscreva-se grátis e comece a curtir."} />
             <FormRegister />
         </Flex>
         </>

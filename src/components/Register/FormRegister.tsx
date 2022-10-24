@@ -59,7 +59,7 @@ export function FormRegister() {
     router.push("/");
   }
   return (
-    <Box width="100%" paddingBottom="8.125rem">
+    <Box width="100%" paddingTop="2rem" paddingBottom="8.125rem">
       <Flex direction="column" gap="1.5rem" as="form" onSubmit={handleSubmit}>
         <FormOption
           name="email"
