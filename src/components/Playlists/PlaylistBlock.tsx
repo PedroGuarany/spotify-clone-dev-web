@@ -14,8 +14,6 @@ export function PlaylistBlock({id, image, name, description} : PlaylistBlockProp
                 <Box
                     bgColor="#181818"
                     borderRadius="0.25rem" 
-                    position="relative" 
-                    overflow="hidden"
                     minWidth="11.5rem"
                     minH="17rem"
                     padding="0.9rem"
