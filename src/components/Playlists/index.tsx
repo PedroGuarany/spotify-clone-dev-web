@@ -12,7 +12,7 @@ export function PlaylistsComponent() {
             setPlaylists(response.data);
         })
     }, [])
-    return (
+  return (
     <Grid
       templateAreas={`"top-bar top-bar" "nav-bar main-view" "now-playing-bar now-playing-bar"`}
       gridTemplateColumns={"auto 1fr"}
@@ -26,17 +26,17 @@ export function PlaylistsComponent() {
         <NavBarLeft />
       </GridItem>
       <Box width="100%" height="100vh" overflowY="scroll" gridArea="main-view">
-        <LoggedHeader />
+            <LoggedHeader />
         <Box w="100%" padding="86px 32px 24px" marginTop="-63px" >
-          <Text
-            color="#fff"
-            fontSize="1.5rem"
-            fontWeight="700"
-            marginLeft="2.5rem"
-          >
-            Spotify Playlists
-          </Text>
-        </Box>
+                <Text
+                    color="#fff"
+                    fontSize="1.5rem"
+                    fontWeight="700"
+                    marginLeft="2.5rem"
+                >
+                    Spotify Playlists
+                </Text>
+            </Box>
         <Grid
           templateColumns={[
             "repeat(2, 1fr)",
@@ -53,7 +53,7 @@ export function PlaylistsComponent() {
                 ( <PlaylistBlock key={playlist.id} id={playlist.id} image={playlist.image} name={playlist.name} description={playlist.description}></PlaylistBlock> )
             )}
         </Grid>
-      </Box>
+       </Box> 
     </Grid>
   );
 }

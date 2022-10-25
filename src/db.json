@@ -436,6 +436,16 @@
       "name": "Nova playlist",
       "musics": [],
       "id": 10
+    },
+    {
+      "name": "Nova playlist",
+      "musics": [],
+      "id": 11
+    },
+    {
+      "name": "sdfasdf",
+      "musics": [],
+      "id": 12
     }
   ],
   "users": [
@@ -454,6 +464,14 @@
       "gender": "1",
       "password": "1234567",
       "id": 2
+    },
+    {
+      "email": "moises9@gmail.com",
+      "name": "moises",
+      "birthdate": "2003-03-01",
+      "gender": "1",
+      "password": "moises555",
+      "id": 3
     }
   ]
 }
