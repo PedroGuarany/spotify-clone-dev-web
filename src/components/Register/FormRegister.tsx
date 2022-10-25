@@ -79,7 +79,7 @@ export function FormRegister() {
           type="email"
           state={email}
           handleChangeCallback={setEmail}
-        >
+        > 
           <FormHelperText color="#117a37" textDecoration="underline">
             <Link href="#">Usar número de telefone.</Link>
           </FormHelperText>
