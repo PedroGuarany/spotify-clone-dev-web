@@ -1,7 +1,20 @@
 import { Box, Flex, Image, Link, Text } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+import api from "../../api";
 import { Logo } from "./Logo";
+import { NavigationOption } from "./NavigationOption";
 
 export function NavBarLeft() {
+  const router = useRouter();
+  
+  const handleCreatePlaylist = () => {
+    api.post("/playlists", {
+      name: "Nova playlist",
+      musics: []
+    }).then((response) => {
+      router.push(`/playlist/${response.data.id}`);
+    });
+  }
   return (
     <Box
       backgroundColor="#000"
@@ -26,13 +39,13 @@ export function NavBarLeft() {
             src={"/assets/icons/searchIcon.svg"}
             alt={"Ícone da lupa de pesquisa"}
             text={"Buscar"}
-            link={"/Search"}
+            link={"/search"}
           ></NavBarLeftItems>
           <NavBarLeftItems
             src={"/assets/icons/library.svg"}
             alt={"Ícone do home"}
             text={"Sua Biblioteca"}
-            link={"/"}
+            link={""}
           ></NavBarLeftItems>
         </Box>
 
@@ -41,7 +54,8 @@ export function NavBarLeft() {
             src={"/assets/icons/moreIcon.svg"}
             alt={"Icone de adicionar mais"}
             text={"Criar Playlist"}
-            link={"/"}
+            link={""}
+            onClick={handleCreatePlaylist}
           ></NavBarLeftItems>
           <NavBarLeftItems
             src={"/assets/icons/heartIcon.svg"}
@@ -65,25 +79,33 @@ export function NavBarLeft() {
   );
 }
 
-const NavBarLeftItems = ({ src, alt, text, link }) => {
+interface NavBarLeftItemsProps {
+  src: string;
+  alt: string;
+  text: string;
+  link: string;
+  onClick?: () => void;
+}
+const NavBarLeftItems = ({ src, alt, text, link, onClick} : NavBarLeftItemsProps) => {
   return (
     <>
-      <Link
+      <NavigationOption
         display="flex"
         alignItems="center"
         flexDirection="row"
         gap="16px"
         padding="18px 36px 0 28px"
         height="40px"
-        href={link}
+        link={link}
         color="#C7C7C7"
+        onClick={onClick}
         _hover={{ color: "white" }}
       >
         <Image src={src} alt={alt} />
         <Text fontSize="14px" fontWeight="bold">
           {text}
         </Text>
-      </Link>
+      </NavigationOption>
     </>
   );
 };

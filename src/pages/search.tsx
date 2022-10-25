@@ -1,9 +1,9 @@
-import { Search } from "../components/Search/Search";
+import { SearchComponent } from "../components/Search/Search";
 
-export default function search(){
+export default function Search(){
     return(
         <>
-        <Search />
+        <SearchComponent />
         </>
         
     );

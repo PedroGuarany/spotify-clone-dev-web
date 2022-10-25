@@ -3,14 +3,32 @@ import { NavBarLeft } from "../Common/NavBarLeft";
 import { LoggedHeader } from "../Common/LoggedHeader";
 import { MusicList } from "./MusicList";
 import { PlaylistInfo } from "./PlaylistInfo";
-import playlistsData from "./playlists.json";
 import { DefaultMusicProps } from "./ContentMusic";
-import { PlaylistsComponent } from "../Playlists";
+import api from "../../api";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 
-export function PlaylistComponent(query) {
-  const playlist = playlistsData.find(playlist => playlist.id === query.id);
+interface Playlist{
+    id: string;
+    name: string;
+    description: string;
+    image: string;
+    alt: string;
+    musics: DefaultMusicProps[];
+}
+
+export function PlaylistComponent() {
+  const router = useRouter();
+
+  const [playlist, setPlaylist] =  useState({} as Playlist);
   
-  if(!playlist) return <PlaylistsComponent></PlaylistsComponent>;
+  useEffect(() =>{
+    if(router.query.id){
+      api.get(`/playlists/${router.query.id}`).then((response) => {
+        setPlaylist(response.data);
+      }).catch(e => console.log(e));
+    }
+  }, [router.query.id]);
 
   return (
     <Grid

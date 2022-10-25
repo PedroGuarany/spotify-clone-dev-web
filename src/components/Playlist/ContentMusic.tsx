@@ -1,10 +1,14 @@
 import { TriangleUpIcon } from "@chakra-ui/icons";
-import { Box, Grid, Text, Image, Flex } from "@chakra-ui/react";
+import { Box, Grid, Text, Image, Flex, useToast } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+import { Trash } from "react-feather";
+import api from "../../api";
 import { Audio } from "../Common/Audio";
 import { NavigationOption } from "../Common/NavigationOption";
 
+
 export interface DefaultMusicProps {
-  number?: number;
+  id: number;
   name: string;
   artist: string;
   album: string;
@@ -15,8 +19,9 @@ export interface DefaultMusicProps {
   image: string;
 }
 
+
 export function ContentMusic({
-  number,
+  id,
   image,
   src,
   alt,
@@ -26,12 +31,27 @@ export function ContentMusic({
   addIn,
   time,
 }: DefaultMusicProps) {
+  const router = useRouter();
+  const toast = useToast();
+
+  const handleDelete = () => {
+    console.log(router.asPath);
+    api.delete(router.asPath + `?music=${id}`).then(() => {
+      toast({
+        title: "Música deletada com sucesso",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    });
+
+  };
   return (
     <Box padding="6px 0" _hover={{ backgroundColor: "hsla(0,0%,100%,.1)" }}>
       <Grid
         padding="0 16px"
         alignItems="center"
-        gridTemplateColumns="[index] 4ch [first] 6fr [var1] 4fr [var2] 3fr [last]minmax(120px,1fr)"
+        gridTemplateColumns="[index] 4ch [first] 6fr [var1] 4fr [var2] 3fr [var3] 3fr [last]minmax(120px,1fr)"
         gap="16px"
       >
         <Flex justifyContent="center" alignItems="center">
@@ -84,6 +104,7 @@ export function ContentMusic({
         <Text color="#b3b3b3" justifySelf="end">
           {time}
         </Text>
+      <Trash color="#868686" onClick={() => handleDelete()}/>
       </Grid>
     </Box>
   );

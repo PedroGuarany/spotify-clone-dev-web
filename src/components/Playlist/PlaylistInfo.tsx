@@ -3,10 +3,28 @@ import {
   Heading,
   Box,
   Text,
+  Editable,
+  EditablePreview,
+  EditableInput,
+  useDisclosure,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  Button,
+  Input,
+  FormLabel,
 } from "@chakra-ui/react";
+import React from "react";
+import { useState } from "react";
+import api from "../../api";
 import { PointIcon } from "../Common/PointIcon";
-import { DefaultMusicProps } from "./ContentMusic";
+import { FormOption } from "../Register/FormOption";
 import { DefaultImage } from "./DefaultImage";
+
 interface PlaylistProps {
   id: string;
   name: string;
@@ -22,6 +40,35 @@ export function PlaylistInfo({
   alt,
   description
 }: PlaylistProps) {
+
+  const [isEditable, setIsEditable] = useState(false);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const nameRef = React.useRef(null);
+
+  const handleSaveInformation = () => {
+    api.patch(`/playlists/${id}`, {name: nameRef.current.value});
+    onClose();
+  }
+  function PlaylistNameModal(){
+    return (<Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay/>
+        <ModalContent bgColor="#282828" color="white">
+          <ModalHeader>Editar informações</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <FormLabel fontWeight="bold">Nome da playlist</FormLabel>
+            <Input ref={nameRef} ></Input>
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button colorScheme='green' onClick={() => handleSaveInformation()}>Salvar</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>);
+  }
   return (
         <Box backgroundColor="linear-gradient(transparent 0, rgba(0,0,0.5) 100%) #fff">
           <Box
@@ -36,9 +83,10 @@ export function PlaylistInfo({
                 <Text textTransform="uppercase" paddingTop="10px">
                   playlist
                 </Text>
-                <Heading margin="8px 0 12px" fontSize={["30px", "30px", "30px", "58px", "85px","98px"]} fontWeight="900">
+                <Heading margin="8px 0 12px" fontSize={["30px", "30px", "30px", "58px", "85px","98px"]} fontWeight="900" onClick={onOpen}>
                   {name}
                 </Heading>
+                <PlaylistNameModal/>
                 <Text color="#b3b3b3">{description}</Text>
 
                 <Text
@@ -57,3 +105,4 @@ export function PlaylistInfo({
         </Box>
   );
 }
+

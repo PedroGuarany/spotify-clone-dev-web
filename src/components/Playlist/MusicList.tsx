@@ -5,128 +5,20 @@ import {
   Image,
   Grid,
 } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 import { ContentMusic, DefaultMusicProps } from "./ContentMusic";
 
+export function MusicList(playlistMusics) {
+  const [musics, setMusics] = useState([] as DefaultMusicProps[]);
 
+  useEffect(() =>{
+    setMusics(playlistMusics["musics"]);
+  });
 
-const thisMusics: DefaultMusicProps[] = [
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-  {
-    name: "Cap Way",
-    src: "/assets/playlist/musica001.mp3",
-    artist: "Yunk Vino",
-    album: "237",
-    addIn: "13 de fev. de 2022",
-    time: "2:56",
-    image: "/assets/playlist/albumImage.svg",
-    alt: "237 imagem",
-  },
-];
-
-export function MusicList(musics) {
   return (
     <Box background="#121212" padding="32px 32px">
       <Grid
-        gridTemplateColumns="[index] 4ch [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(120px,1fr);"
+        gridTemplateColumns="[index] 4ch [first] 6fr [var1] 4fr [var2] 3fr [var2] 3fr [last] minmax(120px,1fr);"
         padding="0 16px"
         alignItems="center"
         color="#b3b3b3"
@@ -152,13 +44,13 @@ export function MusicList(musics) {
           src="/assets/icons/timeIcon.svg"
           alt="Ícone de um relogio"
         />
-      </Grid>
 
-      {musics.musics.map((music, i) => 
+      </Grid>
+      {musics && musics.length ? musics.map((music, i) => 
         (
         <ContentMusic
           key={i + 1}
-          number={i + 1}
+          id={music.id}
           src={music.src}
           name={music.name}
           artist={music.artist}
@@ -167,7 +59,7 @@ export function MusicList(musics) {
           time={music.time}
           image={music.image}
           alt={music.alt}/>
-      ))}
+      )): null}
     </Box>
   );
 }

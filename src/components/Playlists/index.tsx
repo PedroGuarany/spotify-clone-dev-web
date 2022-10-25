@@ -1,9 +1,17 @@
 import { Box, Flex, Grid, GridItem, Text } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
+import api from '../../api';
 import { LoggedHeader } from '../Common/LoggedHeader';
 import { NavBarLeft } from '../Common/NavBarLeft';
 import { PlaylistBlock } from './PlaylistBlock';
-import PlaylistsData from './playlistsThumbs.json';
+
 export function PlaylistsComponent() {
+    const [playlistsData, setPlaylists] =  useState([]);
+    useEffect(() =>{
+        api.get("/playlists").then(response => {
+            setPlaylists(response.data);
+        })
+    }, [])
     return (
         <Box height="100%" width="100%" bgColor="#121212">
             <Grid
@@ -28,7 +36,7 @@ export function PlaylistsComponent() {
                         gap="1.5rem"
                         margin="2.5rem"
                     >
-                        {PlaylistsData.map(playlist => 
+                        {playlistsData.map(playlist => 
                         ( <PlaylistBlock key={playlist.id} id={playlist.id} image={playlist.image} name={playlist.name} description={playlist.description}></PlaylistBlock> )
                         )}
                     </Grid>

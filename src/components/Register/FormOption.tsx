@@ -15,6 +15,7 @@ interface FormOptionProps {
   type: string;
   children?: ReactNode;
   handleChangeCallback: Function;
+  state: string;
 }
 
 export function FormOption({
@@ -23,7 +24,8 @@ export function FormOption({
   placeholder,
   type,
   children,
-  handleChangeCallback
+  handleChangeCallback,
+  state
 }: FormOptionProps) {
   return (
     <Box>
@@ -38,6 +40,7 @@ export function FormOption({
           _hover={{
             borderColor: "#000",
           }}
+          value={state}
           onChange={event => handleChangeCallback(event.currentTarget.value)}
         />
         {children}

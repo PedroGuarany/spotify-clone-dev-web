@@ -1,4 +1,4 @@
-import { FormOption } from "./FormOption";
+import { FormOption } from "../Register/FormOption";
 import {
   FormHelperText,
   Box,
@@ -13,7 +13,7 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { Button } from "../Common/DefaultButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {useRouter} from 'next/router'
 import { NavigationOption } from "../Common/NavigationOption";
 import api from "../../api";
@@ -24,47 +24,55 @@ interface FormProps{
   birthdate: string;
 }
 
-export function FormRegister() {
+export function FormEditProfile() {
   const router = useRouter();
   const [email, setEmail] = useState("");
-  const [confirmationEmail, setConfirmationEmail] = useState("");
   const [name, setName] = useState("");
-  const [birthdate, setBirthdate] = useState("");
-  const [gender, setGender] = useState("1");
-  const [password, setPassword] = useState("");
+  const [gender, setGender] = useState("");
   const toast = useToast();
-   
+  const [id, setId] = useState("");
+  
+  useEffect(() => {
+    api.get(`/users?email=${localStorage.getItem("email") ?? sessionStorage.getItem("email")}`).then((response) => {
+      setEmail(response.data[0].email);
+      setName(response.data[0].name);
+      setGender(response.data[0].gender);
+      setId(response.data[0].id);
+    })
+  }, []);
+
   const handleSubmit = event => {
     event.preventDefault();
 
-    if(!email || !confirmationEmail || !name || !birthdate || !gender || !password){
+    if(!email || !name || !gender){
       toast({ title: "Registro",  description: "Por favor, preencha todos os campos", duration : 3000, status: "error", position: "top-right"});
       return;
     }
 
-    if(email != confirmationEmail){
-      toast({ title: "Registro",  description: "Os emails não são idênticos", duration : 3000, status: "warning", position: "top-right"});
-      return;
-    }
-
-    api.post("/users",
+    api.patch(`/users/${id}`,
       {
         email: email,
         name: name,
-        birthdate: birthdate,
         gender: gender,
-        password: password
       }
     ).then(() => {
       setEmail("");
-      setBirthdate("");
       setGender("1");
-      setConfirmationEmail("");
       setName("");
-      setPassword("");
-      toast({title: "Registro", description: "Cadastro realizado", status: "success", duration: 3000, isClosable: true, position: "top-right"})
       
-      router.push("/login");
+      if(sessionStorage && sessionStorage.getItem("name")){
+        sessionStorage.setItem("name", name);
+        sessionStorage.setItem("email", email);
+        sessionStorage.setItem("gender", gender);
+      }
+      if(localStorage && localStorage.getItem("name")){
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        localStorage.setItem("gender", gender);
+      }
+      toast({title: "Registro", description: "Edição realizada", status: "success", duration: 3000, isClosable: true, position: "top-right"})
+      
+      router.push("/playlists");
     }).catch((e) => {
       toast({ title: "Registro",  description: "Houve um erro no cadastro", duration : 3000, status: "error", position: "top-right"});
     });
@@ -86,15 +94,6 @@ export function FormRegister() {
         </FormOption>
 
         <FormOption
-          name="emailConfirmation"
-          label="Confirme seu e-mail"
-          placeholder="Insira o email novamente."
-          type="email"
-          state={confirmationEmail}
-          handleChangeCallback={setConfirmationEmail}
-        />
-
-        <FormOption
           name="name"
           label="Como devemos chamar você?"
           placeholder="Insira um nome de perfil"
@@ -105,22 +104,6 @@ export function FormRegister() {
           <FormHelperText>Isso aparece no seu perfil.</FormHelperText>
         </FormOption>
 
-        <FormOption
-          name="password"
-          label="Qual será sua senha?"
-          placeholder="Insira sua senha aqui"
-          type="password"
-          state={password}
-          handleChangeCallback={setPassword}/>
-
-        <FormOption
-          name="birthdate"
-          label="Qual a sua data de nascimento?"
-          placeholder=""
-          type="date"
-          state={birthdate}
-          handleChangeCallback={setBirthdate}
-        />
         <RadioGroup onChange={setGender} value={gender}>
           <FormLabel fontWeight="bold">Qual é o seu gênero?</FormLabel>
           <Flex gap="2.5rem">
@@ -136,53 +119,19 @@ export function FormRegister() {
           </Flex>
         </RadioGroup>
 
-        <Checkbox size="md" colorScheme="green" defaultChecked>
-          Eu concordo com os{" "}
-          <Link color="#117a37" textDecoration="underline" href="#">
-            Termos e Condições de Uso do Spotify.
-          </Link>
-        </Checkbox>
-
         <Box gap="0.75rem">
-          <Text textAlign="center" fontSize="0.75rem">
-            Para saber mais sobre como o Spotify coleta, utiliza, compartilha e
-            protege seus
-            <br /> dados pessoais, leia a{" "}
-            <Link
-              textDecoration="underline"
-              color="#1db954"
-              _hover={{ color: "#1ed760" }}
-              href="#"
-            >
-              Política de Privacidade do Spotify.
-            </Link>
-          </Text>
           <Flex justifyContent="space-around" paddingBottom="1.5rem">
             <Button
               fontSize="1rem"
               fontWeight="900"
               width="10rem"
               height="3.2rem"
-              text="Inscrever-se"
+              text="Editar"
               color="greenX.100"
               fontColor="black"
               type="submit"
             ></Button>
           </Flex>
-          <NavigationOption link="login">  
-          <Flex direction="row" justify="center" gap="0.25rem">
-            <Text textAlign="center">
-              Já tem uma conta?
-            </Text>
-            <Text
-              textDecoration="underline"
-              color="#1db954"
-              _hover={{ color: "#1ed760" }}
-              >
-              Faça login.
-            </Text>
-          </Flex>
-          </NavigationOption>
         </Box>
       </Flex>
     </Box>
