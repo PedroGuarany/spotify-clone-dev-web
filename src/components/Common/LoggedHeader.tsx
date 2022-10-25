@@ -1,5 +1,5 @@
 import { TriangleDownIcon } from "@chakra-ui/icons";
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Menu, MenuButton, MenuItem, MenuItemOption, MenuList, Text } from "@chakra-ui/react";
 
 export function LoggedHeader() {
   return (
@@ -48,24 +48,36 @@ export function LoggedHeader() {
               <Image src="/assets/icons/arrowIcon.svg" alt="Seta"></Image>
             </Button>
           </Box>
-          <Button
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            gap="8px"
-            padding="0"
-            width="115.47px"
-            height="32px"
-            backgroundColor="rgba(0,0,0,.7)"
-            borderRadius="23px"
-            _hover={{ backgroundColor: "#282828" }}
-          >
-            <Image src="/assets/playlist/defaultperfil.svg" alt="Imagem de perfil" borderRadius="50%"></Image>
-            <Text fontSize="14px" fontWeight="700" color="#fff">
-              moises
-            </Text>
-            <TriangleDownIcon color="white" height="10px" />
-          </Button>
+            <Button
+              display="flex"
+              alignItems="center"
+              justifyContent="center"
+              gap="8px"
+              padding="0"
+              width="115.47px"
+              height="32px"
+              backgroundColor="rgba(0,0,0,.7)"
+              borderRadius="23px"
+              _hover={{ backgroundColor: "#282828" }}
+            >
+              <Image src="/assets/playlist/defaultperfil.svg" alt="Imagem de perfil" borderRadius="50%"></Image>
+              <Text fontSize="14px" fontWeight="700" color="#fff">
+                {'moises'}
+              </Text>
+              <TriangleDownIcon color="white" height="10px" />
+            </Button>
+            <Menu z-index="10000">
+              <MenuButton>
+                oiiiiiiii
+              </MenuButton>
+              <MenuList>
+                <MenuItem>Conta</MenuItem>
+                <MenuItem>Perfil</MenuItem>
+                <MenuItem>Configurações</MenuItem>
+                <MenuItem>Sair</MenuItem>
+
+              </MenuList>
+            </Menu>
         </Flex>
       </Box>
     </>
