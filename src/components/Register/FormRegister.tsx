@@ -67,7 +67,7 @@ export function FormRegister() {
           placeholder="Insira seu e-mail"
           type="email"
           handleChangeCallback={setEmail}
-        >
+        > 
           <FormHelperText color="#117a37" textDecoration="underline">
             <Link href="#">Usar número de telefone.</Link>
           </FormHelperText>
