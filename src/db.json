@@ -472,6 +472,14 @@
       "gender": "1",
       "password": "moises555",
       "id": 3
+    },
+    {
+      "email": "moises2@gmail.com",
+      "name": "moises",
+      "birthdate": "2003-03-01",
+      "gender": "1",
+      "password": "moises555",
+      "id": 4
     }
   ]
 }

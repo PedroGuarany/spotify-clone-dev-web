@@ -26,5 +26,7 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "outDir": "./src",
+  "rootDir": "./src"
 }
