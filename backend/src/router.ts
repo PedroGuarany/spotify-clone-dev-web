@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { firstController } from "./app/controller/FirstController";
+import { playlistsController } from "./app/controller/PlaylistsController";
 
 const router: Router = Router()
 
-router.get("/", firstController.home);
+router.get("/playlists", playlistsController.playlists);
 
 export { router };
