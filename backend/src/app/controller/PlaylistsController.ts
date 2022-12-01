@@ -1,72 +1,82 @@
 import { Request, Response } from "express";
-import data from "../../db.json";
-const playlists = data["playlists"];
+import db from "../../db";
+
+const collectionName = "playlists";
+let nextId = 1;
+
+interface Music{
+    id: 1,
+    name: string,
+    artist: string,
+    album: string,
+    addIn: string,
+    time: string,
+    src: string,
+    alt: string,
+    image: string
+}
 
 class PlaylistsController {
 
-  public list(req:Request, res:Response) {
-    return res.json(playlists);
+  public async list(req:Request, res:Response) {
+    let result = await db.list(collectionName); 
+      return res.json(result);
   }
   
-  public get(req:Request, res:Response) {
+  public async get(req:Request, res:Response) {
     const { id } = req.params;
-    const playlist = playlists.find(playlist => playlist.id === Number.parseInt(id));
-    if(!playlist)
+    let result = await db.get(collectionName, Number.parseInt(id));
+    if(!result)
       return res.status(404).json({error: "Playlist not found"});
-    return res.json(playlist);
+    return res.json(result);
   }
 
-  public create(req:Request, res:Response) {
+  public async create(req:Request, res:Response) {
     const {name, description, image, alt} = req.body;
-    playlists.push({
-      id: playlists.length + 1,
+    let result = await db.insert(collectionName, {
+      id: nextId,
       name,
       description,
       image,
       alt
     });
 
-    return res.json({id: playlists.length});
+    nextId += 1;
+    return res.json(result.insertedId);
   }
 
-  public edit(req:Request, res:Response) {
+  public async edit(req:Request, res:Response) {
     const { id } = req.params;
     const {name, description, image, alt} = req.body;
-    let playlist = playlists.find(playlist => playlist.id === Number.parseInt(id));
-    if(!playlist)
-      return res.status(404).json({error: "Playlist not found"});
-
-    playlist.name = name ? name : playlist.name;
-    playlist.description = description ? description : playlist.description;
-    playlist.image = image ? image : playlist.image;
-    playlist.alt = alt ? alt : playlist.alt;
-    playlists[Number.parseInt(id)] = playlist;
-
+    
+    let result = await db.update(collectionName, Number.parseInt(id), {name, description, image, alt});
     return res.json();
   }
 
-  public getMusic(req:Request, res:Response) {
+  public async getMusic(req:Request, res:Response) {
     const { id, musicId } = req.params;
-    const playlist = playlists.find(playlist => playlist.id === Number.parseInt(id));
+    let playlist = await db.get(collectionName, Number.parseInt(id));
     if(!playlist)
       return res.status(404).json({error: "Playlist not found"});
 
-    return res.json(playlist.musics?.find(music => music.id == Number.parseInt(musicId))); 
+    let musics: Music[] = playlist.musics;
+    return res.json(musics.find(music  => music.id == Number.parseInt(musicId))); 
   }
 
-  public searchMusicByName(req:Request, res:Response) {
+  public async searchMusicByName(req:Request, res:Response) {
     const { id } = req.params;
     const { name } = req.query;
-    const playlist = playlists.find(playlist => playlist.id === Number.parseInt(id));
+    let playlist = await db.get(collectionName, Number.parseInt(id));
     if(!playlist)
       return res.status(404).json({error: "Playlist not found"});
 
-    return res.json(playlist.musics?.filter(music => music.name.includes(String(name)))); 
+    let musics: Music[] = playlist.musics;
+    return res.json(musics.filter(music => music.name.includes(String(name)))); 
   }
 
-  public getMusics(req:Request, res:Response) {
+  public async getMusics(req:Request, res:Response) {
     const { id } = req.params;
-    const playlist = playlists.find(playlist => playlist.id === Number.parseInt(id));
+    let playlist = await db.get(collectionName, Number.parseInt(id));
     if(!playlist)
       return res.status(404).json({error: "Playlist not found"});
 

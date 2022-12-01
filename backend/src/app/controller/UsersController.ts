@@ -1,25 +1,29 @@
 import { Request, Response } from "express";
-import { stringify } from "querystring";
-import data from "../../db.json";
-const users = data["users"];
+import db from "../../db";
+
+const collectionName = "users";
+let nextId = 2;
 
 class UserController {
-    public list(req:Request, res:Response) {
-      return res.json(users);
+
+    public async list(req:Request, res:Response) {
+      let result = await db.list(collectionName); 
+      return res.json(result);
     }
 
-    public get(req:Request, res:Response) {
+    public async get(req:Request, res:Response) {
       const { id } = req.params;
-      const user = users.find(user => user.id === Number.parseInt(id));
-      if(!user)
+      
+      let result = await db.get(collectionName, Number.parseInt(id));
+      if(!result)
         return res.status(404).json({error: "User not found"});
-      return res.json(user);
+      return res.json(result);
     }
 
-    public create(req:Request, res:Response) {
+    public async create(req:Request, res:Response) {
       const {name, email, birthdate, gender, password} = req.body;
-      users.push({
-        id: users.length + 1,
+      let result = await db.insert(collectionName, {
+        id: nextId,
         name,
         email,
         birthdate,
@@ -27,32 +31,26 @@ class UserController {
         password
       });
 
-      return res.json({id: users.length});
+      nextId += 1;
+      return res.json(result.insertedId);
     }
 
-    public edit(req:Request, res:Response) {
+    public async edit(req:Request, res:Response) {
       const { id } = req.params;
       const {name, email, birthdate, gender, password} = req.body;
-      let user = users.find(user => user.id === Number.parseInt(id));
-      if(!user)
-        return res.status(404).json({error: "User not found"});
 
-      user.email = email ? email : user.email;
-      user.name = name ? name : user.name;
-      user.birthdate = birthdate ? email : user.email;
-      user.gender = gender ? gender : user.gender;
-      user.password = password ? password : user.password;
-      users[Number.parseInt(id)] = user;
+      let result = await db.update(collectionName, Number.parseInt(id), {name, email, birthdate, gender, password});
 
-      return res.json({});
+      return res.json(result);
     }
 
-    public search(req:Request, res:Response) {
+    public async search(req:Request, res:Response) {
       const { email } = req.query;
-      const user = users.find(user => user.email === String(email));
-      if(!user)
+      let result = await db.search(collectionName, {email: String(email)});
+      if(!result)
         return res.status(404).json({error: "User not found"});
-      return res.json(user);
+
+      return res.json(result);
     }
 }
 
