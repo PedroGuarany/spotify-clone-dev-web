@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { stringify } from "querystring";
 import data from "../../db.json";
 const users = data["users"];
 
@@ -10,6 +11,8 @@ class UserController {
     public get(req:Request, res:Response) {
       const { id } = req.params;
       const user = users.find(user => user.id === Number.parseInt(id));
+      if(!user)
+        return res.status(404).json({error: "User not found"});
       return res.json(user);
     }
 
@@ -24,7 +27,7 @@ class UserController {
         password
       });
 
-      return res.json({id: users.length + 1});
+      return res.json({id: users.length});
     }
 
     public edit(req:Request, res:Response) {
@@ -34,14 +37,22 @@ class UserController {
       if(!user)
         return res.status(404).json({error: "User not found"});
 
-      user.email = email;
-      user.name = name;
-      user.birthdate = birthdate;
-      user.gender = gender;
-      user.password = password;
+      user.email = email ? email : user.email;
+      user.name = name ? name : user.name;
+      user.birthdate = birthdate ? email : user.email;
+      user.gender = gender ? gender : user.gender;
+      user.password = password ? password : user.password;
       users[Number.parseInt(id)] = user;
 
       return res.json({});
+    }
+
+    public search(req:Request, res:Response) {
+      const { email } = req.query;
+      const user = users.find(user => user.email === String(email));
+      if(!user)
+        return res.status(404).json({error: "User not found"});
+      return res.json(user);
     }
 }
 
