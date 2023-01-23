@@ -74,7 +74,7 @@ export function Menu({...rest}: MenuProps) {
 const NavbarItems = () => {
   return (
     <>
-      <NavigationOption link={"/"}>
+      <NavigationOption link={"/premium"}>
         <Text text="Premium"></Text>
       </NavigationOption>
       <NavigationOption link={"/support"}>
