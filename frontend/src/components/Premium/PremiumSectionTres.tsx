@@ -61,4 +61,15 @@ interface BoxPlanProps {
     plano: string;
     descricao: string;
     contas: string;
+    beneficios: string;
+    beneficiosdois: string;
+    beneficiostres: string;
+    beneficiosquatro: string;
+}
+const DefaultPlan = ({plano, descricao, contas, beneficios, beneficiosdois, beneficiostres, beneficiosquatro} : BoxPlanProps) => {
+    return (
+        <Box>
+            
+        </Box>
+    );
 }
